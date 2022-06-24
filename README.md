@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+html, body {
+    min-height: 110%;
+}
+body {
+  text-align: center;
+  font-family: 'Trebuchet MS', sans-serif;
 
+}
+</style>
+</head>
+<body>
+<FONT COLOR="WHITE">
+<Body background="ft5.jpg">   
+<h1>Ronald Kroening</h1>
+<p>Institution: Pace University, Spring 2023</p>
+<p>GPA: 3.32</p>
+<p>Major: Bachelors of Science, Computer Science</p>
+<p>Minor: Political Science</p>
+<p>Awards: Pforzheimer Honors College Member, FIRST Robotics Scholarship.</p>
+<h2>Academic Progress</h2>
+<h3>Coursework</h3>
+<p>Computer Programming I | Computer Programming II | Mathematical Structures for Computer Science </p>
+<p>Algorithms and Computing Theory | Computer Architecture </p>
+<p>Fundamentals of Unix and C | Data Structures and Algorithms</p>
+<p>Design Thinking | Operating Systems and Architecture | Programming Languages and Implementation</p>
+<p>Introduction to Data Mining | Introduction to Statistics | Software Engineering</p>
+<h2>Relevant Skills</h2>
+<p>Languages: Python, Julia, Java, Swift, C, C#, HTML, JavaScript </p>
+<p>Frameworks: Pandas, Tensorflow, Numpy, Github, Natural Language Toolkit, React, Flask, OpenAI Gym </p>
+<p>Software: Unity3D, AndroidStudios, XCode, Visual Studios Code, IntelliJ, VirtualBox</p>
+<p>Certifications: Fundamentals of Machine Learning- Linkedin Learning, IBM Exploratory Data Analysis- Coursera </p>
+<h2><strong>Notable Projects</strong></h2>
+<p><strong>CURES Summer Research Project: NLP and Legal Classification    |    May 2022- August 2022</strong></p>
+<p>Working under the guidance of Dr. Christelle Scharff, I am designing a system that uses artificial intelligence to <br>classify legal cases into one of four areas of criminal law. This project uses <br>natural language processing as part of a supervised learning system.</p>
+<p><strong>RecycleFinder    |    February 2022- May 2022</strong></p>
+<p>A small group I was a part of designed this app that provides relevant information about recycling, from <br>local government data on nearest recycling bins, news related to recycling, and a machine learning model that classifies <br>potential recycling into one of six categories. The model was developed with Tensorflow and had an accuracy of 92%.</p>
+<p><strong>Syntext   |     October 2021-November 2021</strong></p>
+<p>In order to learn about the Julia Programming Language, I designed a neural network in Julia from scratch that <br>would be able to classify text by its literary genre. It utilized word vectors in order to identify the similarity in <br>different words, allowing for the model to predict the corresponding class.</p>
+<h2>Industry Experience</h2>
+<p><strong>Co-Lecturer, Lincoln Laboratories, Massachusetts Institute of Technology   |   May 2022-August 2022</strong></p>
+<p>Currently, I assist with the creation and planning of all course materials, including lectures and activities to engage <br>the students. I am also responsible for ensuring that I can effectively teach machine learning concepts to <br>future stem students and help them develop important skills that will help them succeed both in the course and in the tech industry.</p>
+<p><strong>Software Engineer, Seidenberg Creative Labs, Pace University   |   November 2021-June 2023</strong></p>
+<p>As a software engineer, I was responsible for reaching out to clients in order to understand their vision and translate <br>that concept into a properly working application. By working in a small team, I also was able to coordinate <br>meeting times with other members so that the projects were finished efficiently.</p>
+<p><strong>Mentor, Pace University Summer STEM Institute    |   July 2020-August 2020</strong> </p>
+<p>During my time as a mentor, I helped foster an environment where students were able to build soft skills such as collaboration <br>and determination, as well as provide advice for their projects as well as for them as STEM students.</p>
+<p><strong>Senior Intern, Adam Schleifer Congressional Campaign   |   May 2020-June 2020</strong></p>
+<p>As part of the campaign, I utilized data management technology to engage with voters. In addition, <br>I also conducted policy research and formatted important information for election day.</p>
+<h2>Collegiate Experience</h2>
+<p>Donofrio Leadership Program    |   March 2022- November 2022</p>
+<p>Jamweek Hackathon, Competitor    |   February 2022</p>
+<p>StartHack Hackathon, Competitor    |   March 2021</p>
+<p>HackTheNorth Hackathon, Competitor   |   January 2021</p>
+<p>Pforzheimer Honors College, Member   |   July 2020-June 2023</p>
+<p>Pace Political Science Society, Member   |   September 2019-June 2023</p>
+<p>Tonal Recall A Capella Club, Treasurer   |   September 2019-June 2023</p>
+</body>
+</html>
