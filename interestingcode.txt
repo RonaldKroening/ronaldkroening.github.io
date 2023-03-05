@@ -1,0 +1,90 @@
+scrolling feature
+
+<section id="section01" class="demo">
+      <a href="#section02"><span></span><img width="60" height="60px"src="rklg5.png"></img></a>
+      <script>
+        $(function() {
+          $('a[href*=#]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+          });
+        });
+      </script>
+    </section>
+    <section id="section02" class="demo">
+
+    </section>
+
+
+            document.getElementById(i.toString()).onclick = function() {
+              var t = document.getElementById(i.toString()).textContent
+              if(t == "Clear"){
+                tags_selected = []
+                
+              }else{
+                if(contains(tags_selected,t)){
+                  tags_selected.splice(tags_selected.indexOf(t), 1); 
+                }else{
+                  tags_selected.push(t);
+                }
+              }
+              
+            }
+            document.getElementById(i.toString()).style.backgroundColor = colors[i];
+            if(document.getElementById(i.toString()).textContent == "Clear"){
+              document.getElementById(i.toString()).style.backgroundColor = '#bbbbbb'
+            }
+            <!-- https://www.w3schools.com/jsref/event_onclick.asp -->
+
+          }
+
+    
+
+<script>
+      fetch('/status.json')
+        .then(response => response.json())
+        .then(data => {
+          var element = document.getElementById("main");
+          for(i = 0; i < data.length; i++){
+            console.log(data[i]);
+            const n = document.createElement('h3');
+            n.textContent = data[i].question
+            const d = document.createElement('p');
+            d.textContent = data[i].response
+            try{
+              var t1 = data[i].link
+              d.href = t1
+              d.link = t1
+            }catch(error){ console.error(error)}
+            element.appendChild(n);
+            element.appendChild(d);
+
+          }
+        })
+        .catch(error => console.error(error));
+</script>
+
+
+  <script>
+    fetch('/status.json')
+      .then(response => response.json())
+      .then(data => {
+        var element = document.getElementById("main");
+        for(i = 0; i < data.length; i++){
+          console.log(data[i]);
+          const n = document.createElement('h3');
+          n.textContent = data[i].question
+          const d = document.createElement('p');
+          d.textContent = data[i].response
+          try{
+            var t1 = data[i].link
+            d.href = t1
+            d.link = t1
+          }catch(error){ console.error(error)}
+          element.appendChild(n);
+          element.appendChild(d);
+
+        }
+      })
+      .catch(error => console.error(error));
+</script>
