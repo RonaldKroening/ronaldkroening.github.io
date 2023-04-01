@@ -1,0 +1,223 @@
+
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+<html lang="en">
+  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <style>
+      h1 {text-align: center;margin-right:40px;color: white;font-size: 50px;}
+      h2 {margin-left: 50px;color: white;}
+      h3 {margin-left: 350px;color: white;font-size: 20px;}
+      h4 {margin-left: 350px;;color: white;font-size: 15px;font-weight: 15;}
+      h5 {margin-left: 350px;color: white; font-weight: 10;margin-top: 4px;margin-bottom: 1px;}
+      p {margin-left: 350px;color: white;margin-top: 1px;margin-bottom: 20px;width: 45%;}
+      * {
+        box-sizing: border-box;
+      }
+      hr{
+        margin-bottom: 15px;
+        margin-left: 350px;
+        width: 600px;
+      }
+
+      body {
+        background-color: #474e5d;
+        margin-left: 20px;
+        height: 120%;
+        font-family: Helvetica, sans-serif;
+      }
+      ul {
+        list-style-type: none;
+      }
+
+      nav {
+        position: sticky;
+        top: 3;
+        left: 0;
+        list-style-type: none;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .05rem 3.5rem;
+        /*box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);*/
+        bottom: 50px;
+        
+      }
+      .button {
+        background-color: #429594;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        height: 0px;
+        align-content: center;
+        align-self: center;
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 0px;
+        font-size: 20px;
+        margin-left: 1000px;
+      }
+      
+      .button1 {border-radius: 2px;}
+      .button2 {border-radius: 4px;}
+      .button3 {border-radius: 8px;}
+      .button4 {border-radius: 12px;}
+      .button5 {border-radius: 50%;}
+      form{
+        position: relative;
+        align-items: right;
+        align-self: right;
+        align-content: right;
+      }
+
+      a{
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        font-family: Verdana;
+        padding: 45px 20px;
+    }
+
+      
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {font-size: 16px;}
+
+      
+  
+
+      </style>
+  </head>
+  <body>
+    <div id = "main" align-content>
+      <div>
+      <nav>
+        <a class="active" href="./main.html"><img width="60" height="60px"src="rklg5.png"></img></a>
+        <ul class="navigation">
+          <li><a href="./about.html" class="nav-link">About</a></li>
+          <li><a href="./index.html" class="nav-link">CV</a></li>
+          <li><a href="./featured.html" class="nav-link">Projects</a></li>
+          <li><a href="./research.html" class="nav-link">Research</a></li>
+        </ul>
+      </nav>  
+      </div>
+      
+    <script>
+      var unique_tags = [];
+      var tags_selected = [];
+      var colors = ['#e6194b', '#3cb44b', '#ddc009', '#4363d8', '#f58231', '#911eb4', '#46c0c0', '#f032e6', '#10c60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#ae0075', '#8080e0'];
+      fetch('/resitems.json')
+        .then(response => response.json())
+        .then(data => {
+          var element = document.getElementById("main");
+          const t = document.createElement("div");
+          for(i = 0; i < data.length; i++){
+            var it = data[i].tags
+            for(j = 0; j < it.length;j++){
+              if(unique_tags.includes(it[j]) == false ){
+                unique_tags.push(it[j]);
+              }
+            }
+          }
+
+          const td = document.createElement('div');
+          var ti = document.createElement('h1');
+          ti.textContent = "Experience"
+          td.appendChild(ti);
+          var dload = document.createElement('button');
+          var img = document.createElement('img');
+          img.src = 'dl-save-im.png';
+          img.width = 50;
+          img.height = 55;
+          dload.appendChild(img);
+          dload.style.backgroundColor = 'transparent';
+          dload.setAttribute('class','button button4')
+          dload.addEventListener('click', downloadPDF);
+          td.appendChild(dload);
+          element.appendChild(td);
+          function downloadPDF() {
+            const fileUrl = 'rkresume.pdf';
+            const fileName = 'Kroening, Ronald- Resume.pdf';
+          
+            fetch(fileUrl).then(response => {
+              return response.blob();
+            }).then(blob => {
+              // Create a new anchor tag and set its download and href attributes
+              const anchor = document.createElement('a');
+              anchor.download = fileName;
+              anchor.href = URL.createObjectURL(blob);
+          
+              // Simulate a click on the anchor to trigger the download
+              anchor.click();
+          
+              // Remove the anchor from the document
+              anchor.remove();
+            });
+          }
+
+          
+          
+          
+         
+        // Start file download.
+        
+          element.appendChild(dload);
+          const eld = document.createElement("hr");
+          eld.setAttribute('class','hr.solid');
+          element.appendChild(eld);
+          for(i = 0; i < data.length; i++){
+            var els = data[i].tags;
+            const el = document.createElement("div");
+            el.setAttribute('class',"entry")
+            const el1 = document.createElement("div");
+            el1.setAttribute('class',"title")
+            const ela1= document.createElement('h5');
+            if(data[i].end == " "){
+              ela1.textContent = data[i].start
+            }else{
+              ela1.textContent = data[i].start+" - "+data[i].end
+            }
+            const ela2= document.createElement('h3');
+            ela2.textContent = data[i].company+" - "+data[i].Job
+            const el2 = document.createElement("div");
+            el2.setAttribute('class',"body")
+            const n1 = document.createElement('p');
+            n1.textContent = data[i].description;
+            const eld = document.createElement("hr");
+            eld.setAttribute('class','hr.solid');
+            el2.appendChild(n1);
+            el2.appendChild(eld);
+            el1.appendChild(ela2);
+            el1.appendChild(ela1);
+            el.appendChild(el1);
+            el.appendChild(el2)
+            t.appendChild(el);
+            element.appendChild(t);
+          }
+          console.log(unique_tags);
+        })
+        .catch(error => console.error(error));
+    </script>
+  </div>
+  </body>
+
+  </body>
+  <div>
+  
+    
+  </div>
+  
+</html>

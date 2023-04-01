@@ -5,76 +5,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="style-mobile.css" media="screen and (max-width: 767px)">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Featured</title>
-    <style>
-      h1 {text-align: left;font-size: 40px; color: white;margin-left: 30px;}
-      h2 {text-align: left;font-size: 30px;color: white;margin-left: 30px;}
-    h3 {text-align: left;font-size: 20px;}
-    p {text-align: left;color:white; width: 70%;font-size: 18px;margin-left: 20px;}
-    div {text-align: center;font-size: 16px;}
-    html, body {
-        min-height: 110%;
-    }
-
-    body {
-    text-align: center;
-    font-size: 140;
-    font-family: 'Trebuchet MS', sans-serif;
-
-    }
-    img{
-      vertical-align: right;
-      height: 60px;
-      width: 60px;
-
-    }
-    ul {
-      list-style-type: none;
-    }
     
-    
-    nav {
-      position: sticky;
-      top: 2;
-      left: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: .05rem 3.5rem;
-      /*box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);*/
-      bottom: 50px;
-      
-    }
-    a{
-        color: white;
-        font-size: 20px;
-        text-decoration: none;
-        font-family: Verdana;
-        padding: 45px 20px;
-    }
-  h2.link{
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    font-family: Verdana, sans-serif;
-    padding: 0px 0px;
-    
-  }
-
-    </style>
   </head>
-
+  <style>
+    p {font-size: 14px;color: white;font-family: verdana;max-width: 550px;text-align: center; margin-top: 20px;margin-bottom: 10px;padding-left: 40px;}
+    h1{
+      font-size: 50px;
+    }
+    h2{
+      font-size: 30px;
+      font-weight: bold;
+    }
+    html, body {
+      min-height: 100%;
+      max-height: 200%;
+  }
+  
+    @media screen and (min-width: 768px) {
+      #main-mobile {
+        display: none;
+      }
+    }
+  </style>
   <body>
     <div id = "main">
     <Body background="wpfn.jpeg">  
       <nav>
-        <a class="active" href="./main.html"><img width="60" height="60px"src="rklg5.png"></img></a>
+        <a class="active" href="./index.html"><img width="60" height="60px"src="rklg5.png"></img></a>
         <ul class="navigation">
           <li><a href="./about.html" class="nav-link">About</a></li>
-          <li><a href="./index.html" class="nav-link">CV</a></li>
+          <li><a href="./main.html" class="nav-link">CV</a></li>
           <li><a href="./featured.html" class="nav-link">Projects</a></li>
           <li><a href="./research.html" class="nav-link">Research</a></li>
         </ul>
@@ -108,6 +73,45 @@
         })
         .catch(error => console.error(error));
     </script>
+
+    <div id = "main-mobile">
+      <Body background="wpfn.jpeg">  
+        <nav>
+          <a class="active" href="./index.html"><img width="40" height="40px"src="rklg5.png" alt="img1"></img></a>
+          <ul class="navigation">
+            <li ><a >Ronald Kroening</a></li>
+            <a title ="hb" class="active" href="./main.html" ><img width="40px" alt="moblog" height="40px"src="cvicon.png"></img></a>
+          </ul>
+        </nav>
+      
+      <h1><strong>Projects</strong></h1>
+      <p id="details-mobile"></p>
+      </div>
+      <script>
+        fetch('/featured_projects.json')
+          .then(response => response.json())
+          .then(data => {
+            var element = document.getElementById("main-mobile");
+            for(i = 0; i < data.length; i++){
+              console.log(data[i]);
+              const n = document.createElement('h2');
+              n.textContent = data[i].name
+              n.href = data[i].link
+              const d = document.createElement('p');
+              d.textContent = data[i].description
+              const d1 = document.createElement('a')
+              d1.href = data[i].link
+              d1.link = data[i].link
+              d1.target = "_black"
+              n.appendChild(d1)
+              element.appendChild(n);
+              element.appendChild(d);
+              
+              
+            }
+          })
+          .catch(error => console.error(error));
+      </script>
   </body>
   
 </html>
