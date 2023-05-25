@@ -15,6 +15,10 @@
   </head>
 
   <style>
+    a{
+      font-size: 20px;
+
+    }
     h1{
       font-size: 35px;
       font-weight: bold;
@@ -49,10 +53,43 @@
     <h1>
       <h1><strong>Publications</strong></h1>
     </h1>
-    <h2>
-      <h2>"Utilizing Natural Language Processing to Classify Legal Text", Ronald Kroening, adv. Dr. Christelle Scharff, 12/05/22, Pace University CURES Undergraduate Research Awards Summer 2022.<a target="_blank" class = "link" href="https://csis.pace.edu/~scha/MID2022/Abstract/a02.pdf">[Link]</a></h2>
-      <h2>"Predicting Flux Data for Exoplanet Detection", Ronald Kroening, adv. Dr. Francis Parisi, 05/09/22, Pace University Pforzheimer Honors College Thesis. Link TBD</h2>
-    </h2>
+    <script>
+      fetch('/research_pubs.json')
+      .then(response => response.json())
+      .then(data => {
+        var element = document.getElementById("main");
+        for (let i = 0; i < data.length; i++) {
+          const entry = data[i];
+          const title = entry.title;
+          const advisor = entry.advisor;
+          const datePublished = entry['Date Published'];
+          const institutionPublished = entry['Institution Published'];
+          const link = entry.Link;
+          
+          
+          
+          const advisorText = document.createTextNode('"'+title +`", Ronald Kroening, adv. ${advisor}, ${datePublished}, ${institutionPublished}`);
+          const p = document.createElement('h2');
+          p.appendChild(advisorText);
+          
+          if (link) {
+            const linkElement = document.createElement('a');
+            linkElement.href = link;
+            linkElement.textContent = '[Link]';
+            p.appendChild(document.createTextNode(' '));
+            p.appendChild(linkElement);
+          }
+          
+
+          element.appendChild(p);
+          if (i < data.length - 1) {
+            const div = document.createElement('div');
+            element.appendChild(div);
+          }
+        }
+      });
+    
+    </script>
     </div>
     <div id = "main-mobile">
       <nav>
