@@ -39,28 +39,29 @@
       <a title="gh" style="padding-left: 100px;" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')"><img width="50" alt="moblog" height="50" src="ldin.png"></a>
       <a title="ld" style="padding-left: 100px;" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')"><img width="50" alt="moblog" height="50" src="ghub_logo.png"></a>
     </nav>
-    <script>
-      fetch('/qanda.json')
-        .then(response => response.json())
-        .then(data => {
-          var element = document.getElementById("main");
-          for(var i = 0; i < data[0]['questions'].length; i++){
-            
-            var ques = data[0]['questions'][i];
-            var ans = data[0]['answers'][i];
-            const q = document.createElement('h2');
-            q.textContent = ques;
-            const a = document.createElement('p');
-            a.textContent = ans;
 
-            element.appendChild(q);
-            element.appendChild(a);
-          }
-          console.log(data[0]['questions']);
-        })
-        .catch(error => console.error(error));
-    </script>
   </body>
+  <script>
+    fetch('/qanda.json')
+      .then(response => response.json())
+      .then(data => {
+        var element = document.getElementById("main");
+        for(var i = 0; i < data[0]['questions'].length; i++){
+          
+          var ques = data[0]['questions'][i];
+          var ans = data[0]['answers'][i];
+          const q = document.createElement('h2');
+          q.textContent = ques;
+          const a = document.createElement('p');
+          a.textContent = ans;
+  
+          element.appendChild(q);
+          element.appendChild(a);
+        }
+        console.log(data[0]['questions']);
+      })
+      .catch(error => console.error(error));
+  </script>
 </div>  
 <div id = "main-mobile">
   <body>
@@ -74,6 +75,31 @@
       
 
 </body>
+<script>
+  fetch('/qanda.json')
+    .then(response => response.json())
+    .then(data => {
+      var element = document.getElementById("main");
+      for(var i = 0; i < data[0]['questions'].length; i++){
+        
+        var ques = data[0]['questions'][i];
+        var ans = data[0]['answers'][i];
+        const q = document.createElement('h2');
+        q.textContent = ques;
+        const a = document.createElement('p');
+        a.textContent = ans;
 
+        element.appendChild(q);
+        element.appendChild(a);
+      }
+      console.log(data[0]['questions']);
+    })
+    .catch(error => console.error(error));
+</script>
 </div>
+<<<<<<< Updated upstream
 </html>
+=======
+
+</html>
+>>>>>>> Stashed changes
