@@ -9,12 +9,15 @@
       font-weight: bold;
       padding-bottom: 10px;
       padding-right: 20px;
-      padding-top: 10px;
+      padding-top: 20px;
+    }
+    a{
+      font-size: 20px;
+
     }
     p{
-      font-size: 16px;
-      max-width: 90%;
-      padding-bottom: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
     @media screen and (min-width: 768px) {
       #main-mobile {
@@ -25,27 +28,40 @@
 </head>
 <div id="main">
   <body>
-        <nav>
-          <a class="active" href="./index.html"><img width="60" height="60px"src="rklg5.png"></img></a>
-          <ul class="navigation">
-            <li><a href="./about.html" class="nav-link">About</a></li>
-            <li><a href="./main.html" class="nav-link">CV</a></li>
-            <li><a href="./featured.html" class="nav-link">Projects</a></li>
-            <li><a href="./research.html" class="nav-link">Research</a></li>
-          </ul>
-        </nav>
-  <h2>Introduction</h2>
-  <p>My name is Ronald Kroening. I'm 21 years old and currently an undergraduate senior honors student studying at Pace University for a Bachelors of Science in computer science with a minor in Computer Science. My primary focus is artificial intelligence and machine learning, and I am also interesting in software engineering and full stack development.</p>
-  <h2>Why do you like Computer Science?</h2>
-  <p>Since I was little I've always had a knack for solving puzzles. Every challenge I saw was a puzzle that I haven't yet solved, that allowed me to learn and grow. Not only does computer science allow me to chase that feeling of solving a new puzzle, but allows me to put my skills towards useful applications that can benefit the world. I've done coding cams since I was in middle school over the summer, and this allowed me to grow not only my programming background, but my attachment to the computer science industry.</p>
-  <h2>What do you find interesting about your area of focus?</h2>
-  <p>What I find most fascinating about machine learning is its ability to analyze data and be able to make accurate predictions on it. Learning about different types of machine learning algorithms has helped me realize that we are even closer to realizing how humans learn, which allows me to see just how much of an impact our work on technology helps us to learn more about ourselves. Furthermore, the positive applications of machine learning and fields from financial information to advancements in bioengineering show just how important it is that technology gets studied, and this work inspired me to want to be a part of that.</p>
-  <h2>What's your most notable experience in STEM?</h2>
-  <p>I participated in a remote hackathon from late December 2020 to early January 2021. The project I was working on was an image recognition model that could recognize important links in an image, and at the time I worked on it with my partner in the hackathon who was based in India. Being based in New York set us far apart, so we’d have to stay up late in order to account for the time zone difference. I remember feeling constantly motivated throughout the competition regardless of this hardship, which was a key moment for me and realizing that this is what I want to devote my studies to.</p>
-  <h2>Coolest project you ever worked on?</h2>
-  <p>I would have to say my very first research project. It combined reinforcement learning and unsupervised learning to classify text. Not only was it a great research experience to be a part of, I was very proud of the results.</p>
+    <nav>
+      <a class="active" href="./index.html"><img width="60" height="60" src="rklg5.png"></a>
+      <ul class="navigation">
+        <li><a href="./about.html" class="nav-link">About</a></li>
+        <li><a href="./main.html" class="nav-link">CV</a></li>
+        <li><a href="./featured.html" class="nav-link">Projects</a></li>
+        <li><a href="./research.html" class="nav-link">Research</a></li>
+      </ul>
+      <a title="gh" style="padding-left: 100px;" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')"><img width="50" alt="moblog" height="50" src="ldin.png"></a>
+      <a title="ld" style="padding-left: 100px;" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')"><img width="50" alt="moblog" height="50" src="ghub_logo.png"></a>
+    </nav>
+    <script>
+      fetch('/qanda.json')
+        .then(response => response.json())
+        .then(data => {
+          var element = document.getElementById("main");
+          for(var i = 0; i < data[0]['questions'].length; i++){
+            
+            var ques = data[0]['questions'][i];
+            var ans = data[0]['answers'][i];
+            const q = document.createElement('h2');
+            q.textContent = ques;
+            const a = document.createElement('p');
+            a.textContent = ans;
+
+            element.appendChild(q);
+            element.appendChild(a);
+          }
+          console.log(data[0]['questions']);
+        })
+        .catch(error => console.error(error));
+    </script>
   </body>
-</div>
+</div>  
 <div id = "main-mobile">
   <body>
     <nav>
@@ -55,17 +71,9 @@
       <a title ="hb" class="active" href="./main.html" ><img width="40px" alt="moblog" height="40px"src="cvicon.png"></img></a>
     </ul>
   </nav>
-      <h2>Introduction</h2>
-    <p>My name is Ronald Kroening. I'm 21 years old and currently an undergraduate senior honors student studying at Pace University for a Bachelors of Science in computer science with a minor in Computer Science. My primary focus is artificial intelligence and machine learning, and I am also interesting in software engineering and full stack development.</p>
-    <h2>Why do you like Computer Science?</h2>
-    <p>Since I was little I've always had a knack for solving puzzles. Every challenge I saw was a puzzle that I haven't yet solved, that allowed me to learn and grow. Not only does computer science allow me to chase that feeling of solving a new puzzle, but allows me to put my skills towards useful applications that can benefit the world. I've done coding cams since I was in middle school over the summer, and this allowed me to grow not only my programming background, but my attachment to the computer science industry.</p>
-    <h2>What do you find interesting about your area of focus?</h2>
-    <p>What I find most fascinating about machine learning is its ability to analyze data and be able to make accurate predictions on it. Learning about different types of machine learning algorithms has helped me realize that we are even closer to realizing how humans learn, which allows me to see just how much of an impact our work on technology helps us to learn more about ourselves. Furthermore, the positive applications of machine learning and fields from financial information to advancements in bioengineering show just how important it is that technology gets studied, and this work inspired me to want to be a part of that.</p>
-    <h2>What's your most notable experience in STEM?</h2>
-    <p>I participated in a remote hackathon from late December 2020 to early January 2021. The project I was working on was an image recognition model that could recognize important links in an image, and at the time I worked on it with my partner in the hackathon who was based in India. Being based in New York set us far apart, so we’d have to stay up late in order to account for the time zone difference. I remember feeling constantly motivated throughout the competition regardless of this hardship, which was a key moment for me and realizing that this is what I want to devote my studies to.</p>
-    <h2>Coolest project you ever worked on?</h2>
-    <p>I would have to say my very first research project. It combined reinforcement learning and unsupervised learning to classify text. Not only was it a great research experience to be a part of, I was very proud of the results.</p>
-  </body>
+      
+
+</body>
 
 </div>
 </html>

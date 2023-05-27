@@ -14,19 +14,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CV</title>
 
-<style>
-   @media screen and (max-width: 768px) {
-        #main {
-          display: none;
-        }
+    <style>
+      a{
+        font-size: 20px;
+  
       }
-      h4{
-        margin-top:50px;
-        margin-bottom: 50px;
+      h1{
+        font-size: 35px;
+        font-weight: bold;
       }
-
-      
-      /* This CSS will only apply to screens with a max-width of 767px */
+      h2{
+        font-size: 20px;
+      }
+      p {font-size: 15px;color: white;font-family: verdana;max-width: 400px;text-align: center; margin-top: 20px;margin-bottom: 10px;}
       @media screen and (min-width: 768px) {
         #main-mobile {
           display: none;
@@ -37,12 +37,14 @@
   <body>
     <div id = "main">
       <nav>
-        <a title ="hb" class="active" href="./main.html" ><img width="50px" alt="moblog" height="50px"src="rklg5.png"></img></a>
+        <a title ="hb" class="active" href="./index.html" ><img width="50px" alt="moblog" height="50px"src="rklg5.png"></img></a>
         <ul class="navigation">
           <li><a href="./about.html" class="nav-link">About</a></li>
-          <li><a href="./index.html" class="nav-link">CV</a></li>
+          <li><a href="./main.html" class="nav-link">CV</a></li>
           <li><a href="./featured.html" class="nav-link">Projects</a></li>
           <li><a href="./research.html" class="nav-link">Research</a></li>
+          <a title ="gh" padding-left="100px" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ldin.png"></img></a>
+          <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ghub_logo.png"></img></a>
         </ul>
       </nav>
      <iframe title= "Kroening, Ronald- Resume" src="rkresume.pdf" width="100%" height="100%" content-dispositon="inline"></iframe>

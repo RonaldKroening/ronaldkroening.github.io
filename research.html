@@ -25,6 +25,7 @@
     }
     h2{
       font-size: 20px;
+      padding-bottom: 20px;
     }
     p {font-size: 15px;color: white;font-family: verdana;max-width: 400px;text-align: center; margin-top: 20px;margin-bottom: 10px;}
     @media screen and (min-width: 768px) {
@@ -42,6 +43,8 @@
           <li><a href="./main.html" class="nav-link">CV</a></li>
           <li><a href="./featured.html" class="nav-link">Projects</a></li>
           <li><a href="./research.html" class="nav-link">Research</a></li>
+          <a title ="gh" padding-left="100px" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ldin.png"></img></a>
+          <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ghub_logo.png"></img></a>
         </ul>
       </nav>
     <h1>
@@ -53,6 +56,27 @@
     <h1>
       <h1><strong>Publications</strong></h1>
     </h1>
+
+    </div>
+    <div id = "main-mobile">
+      <nav>
+        <a class="active" href="./index.html"><img width="40" height="40px"src="rklg5.png" alt="img1"></img></a>
+        <ul class="navigation">
+          <li ><a >Ronald Kroening</a></li>
+          <a title ="hb" class="active" href="./main.html" ><img width="40px" alt="moblog" height="40px"src="cvicon.png"></img></a>
+        </ul>
+      </nav>
+    <h1>
+      <h1><strong>Research Interests</strong></h1>
+    </h1>
+    <h2>
+      <h2>Machine Learning, Natural Language Processing, Reinforcement Learning, Deep Learning, Neural Networks</h2>
+    </h2>
+    <h1>
+      <h1><strong>Publications</strong></h1>
+    </h1>
+
+    </div>
     <script>
       fetch('/research_pubs.json')
       .then(response => response.json())
@@ -90,30 +114,6 @@
       });
     
     </script>
-    </div>
-    <div id = "main-mobile">
-      <nav>
-        <a class="active" href="./index.html"><img width="40" height="40px"src="rklg5.png" alt="img1"></img></a>
-        <ul class="navigation">
-          <li ><a >Ronald Kroening</a></li>
-          <a title ="hb" class="active" href="./main.html" ><img width="40px" alt="moblog" height="40px"src="cvicon.png"></img></a>
-        </ul>
-      </nav>
-    <h1>
-      <h1><strong>Research Interests</strong></h1>
-    </h1>
-    <h2>
-      <h2>Machine Learning, Natural Language Processing, Reinforcement Learning, Deep Learning, Neural Networks</h2>
-    </h2>
-    <h1>
-      <h1><strong>Publications</strong></h1>
-    </h1>
-    <h2>
-      <p>"Utilizing Natural Language Processing to Classify Legal Text", Ronald Kroening, adv. Dr. Christelle Scharff, 12/05/22, Pace University CURES Undergraduate Research Awards Summer 2022.<a target="_blank" class = "link" href="https://csis.pace.edu/~scha/MID2022/Abstract/a02.pdf">[Link]</a></p>
-      <p>"Predicting Flux Data for Exoplanet Detection", Ronald Kroening, adv. Dr. Francis Parisi, 05/09/22, Pace University Pforzheimer Honors College Thesis. Link TBD</p>
-    </h2>
-    </div>
-
   </body>
   
 </html>
