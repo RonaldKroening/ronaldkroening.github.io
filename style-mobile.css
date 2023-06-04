@@ -66,6 +66,9 @@ button{
     box-sizing: border-box;
   }
 
+  iframe{
+    height: 200px;
+  }
   ul {
     list-style-type: none;
   }

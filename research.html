@@ -78,10 +78,10 @@
 
     </div>
     <script>
-      fetch('/research_pubs.json')
+      fetch('research_pubs.json')
       .then(response => response.json())
       .then(data => {
-        var element = document.getElementById("main");
+        var element = document.getElementById("main-mobile");
         for (let i = 0; i < data.length; i++) {
           const entry = data[i];
           const title = entry.title;

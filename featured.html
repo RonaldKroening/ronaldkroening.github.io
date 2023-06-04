@@ -6,7 +6,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" media="screen and (min-width: 768px)">
-    <link rel="stylesheet" href="style-mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="style-mobile.css" media="screen and (max-width: 768px)">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Featured</title>
@@ -56,31 +56,6 @@
     <h1><strong>Projects</strong></h1>
     <p id="details"></p>
     </div>
-    <script>
-      fetch('/featured_projects.json')
-        .then(response => response.json())
-        .then(data => {
-          var element = document.getElementById("main");
-          for(i = 0; i < data.length; i++){
-            console.log(data[i]);
-            const n = document.createElement('h2');
-            n.textContent = data[i].name
-            n.href = data[i].link
-            const d = document.createElement('p');
-            d.textContent = data[i].description
-            const d1 = document.createElement('a')
-            d1.href = data[i].link
-            d1.link = data[i].link
-            d1.target = "_black"
-            n.appendChild(d1)
-            element.appendChild(n);
-            element.appendChild(d);
-            
-            
-          }
-        })
-        .catch(error => console.error(error))
-    </script>
 
     <div id = "main-mobile">
       <Body background="wpfn.jpeg">  
@@ -95,33 +70,33 @@
       <h1><strong>Projects</strong></h1>
       <p id="details-mobile"></p>
       </div>
-      <script>
-        fetch('/featured_projects.json')
-          .then(response => response.json())
-          .then(data => {
-            var element = document.getElementById("main-mobile");
-            for(i = 0; i < data.length; i++){
-              console.log(data[i]);
-              const n = document.createElement('h2');
-              n.textContent = data[i].name
-              n.href = data[i].link
-              const d = document.createElement('p');
-              d.textContent = data[i].description
-              const d1 = document.createElement('a')
-              d1.href = data[i].link
-              d1.link = data[i].link
-              d1.target = "_black"
-              n.appendChild(d1)
-              element.appendChild(n);
-              element.appendChild(d);
-              
-              
-            }
-          })
-          .catch(error => console.error(error))
-      </script>
+      
   </body>
-  
+  <script>
+    fetch('/featured_projects.json')
+      .then(response => response.json())
+      .then(data => {
+        var element = document.getElementById("main-mobile");
+        for(i = 0; i < data.length; i++){
+          console.log(data[i]);
+          const n = document.createElement('h2');
+          n.textContent = data[i].name
+          n.href = data[i].link
+          const d = document.createElement('p');
+          d.textContent = data[i].description
+          const d1 = document.createElement('a')
+          d1.href = data[i].link
+          d1.link = data[i].link
+          d1.target = "_black"
+          n.appendChild(d1)
+          element.appendChild(n);
+          element.appendChild(d);
+          
+          
+        }
+      })
+      .catch(error => console.error(error))
+  </script> 
 </html>
 
 

@@ -18,14 +18,23 @@
       padding-bottom: 10px;
       padding-right: 20px;
       padding-top: 20px;
+      text-align: center;
     }
     a{
       font-size: 20px;
 
     }
+    h3{
+      text-align: center;
+    }
     p{
+      display: inline;
       padding-top: 10px;
       padding-bottom: 10px;
+      text-align: center;
+      align-content: center;
+      align-items: center;
+      align-self: center;
     }
     @media screen and (min-width: 768px) {
       #main-mobile {
@@ -79,30 +88,31 @@
       <li ><a >Ronald Kroening</a></li>
       <a title ="hb" class="active" href="./main.html" ><img width="40px" alt="moblog" height="40px"src="cvicon.png"></img></a>
     </ul>
-  </nav>
+    </nav>
       
+    <script>
+      fetch('/qanda.json')
+        .then(response => response.json())
+        .then(data => {
+          var element = document.getElementById("main-mobile");
+          for(var i = 0; i < data[0]['questions'].length; i++){
+            
+            var ques = data[0]['questions'][i];
+            var ans = data[0]['answers'][i];
+            const q = document.createElement('h2');
+            q.textContent = ques;
+            const a = document.createElement('p');
+            a.textContent = ans;
+  
+            element.appendChild(q);
+            element.appendChild(a);
+          }
+          console.log(data[0]['questions']);
+        })
+        .catch(error => console.error(error));
+    </script>
+  </body>
 
-</body>
-<script>
-  fetch('/qanda.json')
-    .then(response => response.json())
-    .then(data => {
-      var element = document.getElementById("main");
-      for(var i = 0; i < data[0]['questions'].length; i++){
-        
-        var ques = data[0]['questions'][i];
-        var ans = data[0]['answers'][i];
-        const q = document.createElement('h2');
-        q.textContent = ques;
-        const a = document.createElement('p');
-        a.textContent = ans;
-
-        element.appendChild(q);
-        element.appendChild(a);
-      }
-      console.log(data[0]['questions']);
-    })
-    .catch(error => console.error(error));
-</script>
 </div>
+
 </html>

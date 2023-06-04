@@ -1,5 +1,3 @@
-</html>
-
 <!DOCTYPE html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -12,21 +10,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CV</title>
+    <title>Home</title>
 
     <style>
-      a{
-        font-size: 20px;
-  
+      p{
+        margin:20px;
+        min-width: 200px;
       }
-      h1{
-        font-size: 35px;
-        font-weight: bold;
+        a{
+          font-size: 20px;
+    
+        }
+        p {font-size: 15px;color: white;font-family: verdana;max-width: 400px;text-align: center; margin-top: 20px;margin-bottom: 10px;}
+        @media screen and (min-width: 768px) {
+          #main-mobile {
+            display: none;
+          }
+        }
+      @media screen and (max-width: 768px) {
+        #main {
+          display: none;
+        }
       }
-      h2{
-        font-size: 20px;
+      h4{
+        margin-top:50px;
+        margin-bottom: 50px;
+        font-size: 24px;
       }
-      p {font-size: 15px;color: white;font-family: verdana;max-width: 400px;text-align: center; margin-top: 20px;margin-bottom: 10px;}
+
+      
+      /* This CSS will only apply to screens with a max-width of 767px */
       @media screen and (min-width: 768px) {
         #main-mobile {
           display: none;
@@ -47,10 +60,16 @@
           <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ghub_logo.png"></img></a>
         </ul>
       </nav>
-     <iframe title= "Kroening, Ronald- Resume" src="rkresume.pdf" width="100%" height="100%" content-dispositon="inline"></iframe>
-  </body>
+      <div>
+      <iframe src="rkresume.pdf" style="width:40%; height:100%;" frameborder="0" content-dispositon="inline"></iframe>
+        </div>
+    </body>
 
 
+
+
+
+</div>
 <div id = "main-mobile">
   <nav>
     <a class="active" href="./index.html"><img width="40" height="40px"src="rklg5.png" alt="img1"></img></a>
@@ -59,11 +78,15 @@
       <a title ="hb" class="active" href="./main.html" ><img width="40px" alt="moblog" height="40px"src="cvicon.png"></img></a>
     </ul>
   </nav>
-  <div>
-    <iframe title= "Kroening, Ronald- Resume" src="rkresume.pdf" width="100%" height="100%" content-dispositon="inline"></iframe>
-  </div>
+
+  <img src="rk-resume.png" width="100%" height="150%"alt="Resume">
+  
+  
+  
 
 </body>
+
+
 
 </div>
 </html>
