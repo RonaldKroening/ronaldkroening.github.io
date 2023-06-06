@@ -30,6 +30,8 @@
   }
   p{
     margin-bottom: 10px;
+    text-align: center;
+    
   }
     @media screen and (min-width: 768px) {
       #main-mobile {
@@ -53,32 +55,33 @@
     </nav>
 
   </body>
-  <script>
-    fetch('/qanda.json')
-      .then(response => response.json())
-      .then(data => {
-        var main = "main"
-        if (window.innerWidth <= 768) {
-          main = "main-mobile";
-        }
-        var element = document.getElementById(main);
-        for(var i = 0; i < data[0]['questions'].length; i++){
-          
-          var ques = data[0]['questions'][i];
-          var ans = data[0]['answers'][i];
-          const q = document.createElement('h2');
-          q.textContent = ques;
-          const a = document.createElement('p');
-          a.textContent = ans;
-  
-          element.appendChild(q);
-          element.appendChild(a);
-        }
-        console.log(data[0]['questions']);
-      })
-      .catch(error => console.error(error));
-  </script>
+
 </div>  
+<script>
+  fetch('/qanda.json')
+    .then(response => response.json())
+    .then(data => {
+      var main = "main"
+      if (window.innerWidth <= 768) {
+        main = "main-mobile";
+      }
+      var element = document.getElementById(main);
+      for(var i = 0; i < data[0]['questions'].length; i++){
+        
+        var ques = data[0]['questions'][i];
+        var ans = data[0]['answers'][i];
+        const q = document.createElement('h2');
+        q.textContent = ques;
+        const a = document.createElement('p');
+        a.textContent = ans;
+
+        element.appendChild(q);
+        element.appendChild(a);
+      }
+      console.log(data[0]['questions']);
+    })
+    .catch(error => console.error(error));
+</script>
 <div id = "main-mobile">
   <body>
     <nav>
@@ -88,28 +91,7 @@
       <a title ="hb" class="active" href="./main.html" ><img width="40px" alt="moblog" height="40px"src="cvicon.png"></img></a>
     </ul>
     </nav>
-      
-    <script>
-      fetch('/qanda.json')
-        .then(response => response.json())
-        .then(data => {
-          var element = document.getElementById("main-mobile");
-          for(var i = 0; i < data[0]['questions'].length; i++){
-            
-            var ques = data[0]['questions'][i];
-            var ans = data[0]['answers'][i];
-            const q = document.createElement('h2');
-            q.textContent = ques;
-            const a = document.createElement('p');
-            a.textContent = ans;
-  
-            element.appendChild(q);
-            element.appendChild(a);
-          }
-          console.log(data[0]['questions']);
-        })
-        .catch(error => console.error(error));
-    </script>
+
   </body>
 
 </div>
