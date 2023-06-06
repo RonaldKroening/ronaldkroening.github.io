@@ -13,33 +13,25 @@
     <title>Home</title>
 
     <style>
-      p{
-        margin:20px;
-        min-width: 200px;
-      }
+
+
         a{
           font-size: 20px;
     
         }
-        p {font-size: 15px;color: white;font-family: verdana;max-width: 400px;text-align: center; margin-top: 20px;margin-bottom: 10px;}
-        @media screen and (min-width: 768px) {
-          #main-mobile {
-            display: none;
-          }
-        }
-      @media screen and (max-width: 768px) {
-        #main {
-          display: none;
-        }
-      }
+
       h4{
         margin-top:50px;
         margin-bottom: 50px;
         font-size: 24px;
       }
 
-      
-      /* This CSS will only apply to screens with a max-width of 767px */
+      @media screen and (max-width: 768px) {
+        #main {
+          display: none;
+        }
+      }
+
       @media screen and (min-width: 768px) {
         #main-mobile {
           display: none;
@@ -56,8 +48,8 @@
           <li><a href="./main.html" class="nav-link">CV</a></li>
           <li><a href="./featured.html" class="nav-link">Projects</a></li>
           <li><a href="./research.html" class="nav-link">Research</a></li>
-          <a title ="gh" padding-left="100px" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ldin.png"></img></a>
-          <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ghub_logo.png"></img></a>
+          <a title ="gh" padding-left="100px" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ghub_logo.png"></img></a>
+          <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ldin.png"></img></a>
         </ul>
       </nav>
   </body>
@@ -69,7 +61,7 @@
     <h4>“Somewhere, something incredible is waiting to be known.”- Carl Sagan</h4>
 
 
-
+<!-- https://localhost:5501 -->
 
 </div>
 <div id = "main-mobile">

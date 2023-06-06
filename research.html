@@ -43,8 +43,8 @@
           <li><a href="./main.html" class="nav-link">CV</a></li>
           <li><a href="./featured.html" class="nav-link">Projects</a></li>
           <li><a href="./research.html" class="nav-link">Research</a></li>
-          <a title ="gh" padding-left="100px" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ldin.png"></img></a>
-          <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ghub_logo.png"></img></a>
+          <a title ="gh" padding-left="100px" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ghub_logo.png"></img></a>
+          <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ldin.png"></img></a>
         </ul>
       </nav>
     <h1>
@@ -74,14 +74,20 @@
     </h2>
     <h1>
       <h1><strong>Publications</strong></h1>
-    </h1>
+    </h1> 
 
     </div>
     <script>
+      var main = "main"
       fetch('research_pubs.json')
       .then(response => response.json())
       .then(data => {
-        var element = document.getElementById("main-mobile");
+        var main = "main";
+
+        if (window.innerWidth <= 768) {
+          main = "main-mobile";
+        }
+        var element = document.getElementById(main);
         for (let i = 0; i < data.length; i++) {
           const entry = data[i];
           const title = entry.title;

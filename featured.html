@@ -42,14 +42,14 @@
     <div id = "main">
     <Body background="wpfn.jpeg">  
       <nav>
-        <a class="active" href="./index.html"><img width="60" height="60px"src="rklg5.png"></img></a>
+        <a title ="hb" class="active" href="./index.html" ><img width="50px" alt="moblog" height="50px"src="rklg5.png"></img></a>
         <ul class="navigation">
           <li><a href="./about.html" class="nav-link">About</a></li>
           <li><a href="./main.html" class="nav-link">CV</a></li>
           <li><a href="./featured.html" class="nav-link">Projects</a></li>
           <li><a href="./research.html" class="nav-link">Research</a></li>
-          <a title ="gh" padding-left="100px" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ldin.png"></img></a>
-          <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ghub_logo.png"></img></a>
+          <a title ="gh" padding-left="100px" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ghub_logo.png"></img></a>
+          <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ldin.png"></img></a>
         </ul>
       </nav>
     
@@ -76,7 +76,11 @@
     fetch('/featured_projects.json')
       .then(response => response.json())
       .then(data => {
-        var element = document.getElementById("main-mobile");
+        var main = "main"
+        if (window.innerWidth <= 768) {
+          main = "main-mobile";
+        }
+        var element = document.getElementById(main);
         for(i = 0; i < data.length; i++){
           console.log(data[i]);
           const n = document.createElement('h2');

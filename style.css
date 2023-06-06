@@ -5,7 +5,14 @@ body{
 nav h1 {
     color: white;
   }
-  
+  .nav-link{
+    margin-left: 20px;
+    margin-right: 60px;
+  }
+  .active{
+    margin-left: 30px;
+    margin-right: 50px;
+  }
   nav a {
     color: white;
     transition: var(--transition);
@@ -26,7 +33,7 @@ nav h1 {
   h2 {text-align: center;font-size: 30px;width: 100%;padding-left: 30px;font-family: Verdana, sans-serif;color:white; font-weight: normal;}
   h3 {text-align: left;font-size: 24px;color:white; font-family: Verdana;padding-bottom: 5px;margin-left: 20px;}
   h4 {text-align: center;font-size: 18px;color:white; font-family: Verdana;padding-bottom: 15px;margin-left: 20px;margin-bottom: 20px;}
-  p {font-size: 16px;color: white;font-family: verdana;max-width: 600px;text-align: center; margin: 0 auto;}
+  p {font-size: 16px;color: white;font-family: verdana;max-width: 40%;text-align: center; margin: 0 auto;}
 button{
   background-color: transparent;
   width: 100px;
