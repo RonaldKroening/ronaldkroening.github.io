@@ -1,0 +1,20 @@
+[
+    {
+        "name" : "L1: Introduction to Artificial Intelligence",
+        "author": "Ronald Kroening",
+        "description" : "An introduction to the field of Artificial Intelligence, and an overview of the concepts and branches of the field.",
+        "link" : "https://docs.google.com/presentation/d/e/2PACX-1vRWXTSXA6yrSTyAt-xrXWaYVvyzzSGTQCx5KCINoB0sisBFGIp40dyVLx9CQqvOsZvXXeXGPjUZoyWQ/embed?start=false&loop=false&delayms=60000"
+    },
+    {
+        "name" : "L1.5: History to Artificial Intelligence",
+        "author": "Ronald Kroening",
+        "description" : "The history of Artificial Intelligence, from the initial mathematical framework to the current state of Artificial Intelligence.",
+        "link" : "https://docs.google.com/presentation/d/e/2PACX-1vT6WKtUlwbU5N5pun-Y6lZ4u3SlEMYs8h0vyghwtc3Qv1zArmdAx_FQFXurA0P2L7QK6UaeSdT5aa0k/embed?start=false&loop=false&delayms=60000"
+    },
+    {
+        "name" : "L2: Introduction to Machine Learning",
+        "author": "Ronald Kroening",
+        "description" : "Intoduction to Machine Learning, defining what makes a machine learning model, and examining the types of problems machine learning can solve and how it is possible.",
+        "link" : "https://docs.google.com/presentation/d/e/2PACX-1vRMT4qq2EYp6h32jM7SPMVP3oQ44juNegkZNAVpnXKtRz_mN82wqL-VVhS8DfBrY1GVMAg-Sn6RH9Sl/embed?start=false&loop=false&delayms=60000"
+    }
+]

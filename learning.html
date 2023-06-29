@@ -10,7 +10,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title id="Learning Hall"></title>
 
     <style>
 
@@ -25,6 +25,42 @@
         margin-bottom: 50px;
         font-size: 24px;
       }
+      table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+
+        .block {
+            width: 400px;
+            height: 200px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .block h2 {
+            margin: 5px 0;
+        }
+
+        .block p {
+            margin: 5px 0;
+        }
+
+        .preview {
+            width: 80px;
+            height: 80px;
+            background-color: #ddd;
+            margin-bottom: 10px;
+        }
 
       @media screen and (max-width: 768px) {
         #main {
@@ -53,18 +89,52 @@
           <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ldin.png"></img></a>
         </ul>
       </nav>
+
   </body>
+  <table id="presentationTable"></table>
 
 
-    <h1><strong>Ronald Kroening</strong></h1>
-    <h2><strong>Student | Full Stack Developer</strong></h2>
-    <!-- <img src="animation_mk7.gif" background-color="transparent" width="300px" height="300px"><img> -->
-    <h4>“Somewhere, something incredible is waiting to be known.”- Carl Sagan</h4>
-
-
-<!-- https://localhost:5501 -->
 
 </div>
+<script>
+    // Fetch the presentation.json file
+    fetch('presentations.json')
+        .then(response => response.json())
+        .then(data => {
+            // Generate the table rows and cells dynamically
+            const table = document.getElementById('presentationTable');
+
+            data.forEach(item => {
+                const row = table.insertRow();
+                const cell = row.insertCell();
+
+                // Create the block element
+                const block = document.createElement('div');
+                block.classList.add('block');
+
+                // Create the h2 element for title
+                const title = document.createElement('h2');
+                title.innerText = item.title;
+
+                // Create the preview element
+                const preview = document.createElement('div');
+                preview.classList.add('preview');
+
+                // Create the p element for description
+                const description = document.createElement('p');
+                description.innerText = item.description;
+
+                // Append the elements to the block
+                block.appendChild(title);
+                block.appendChild(preview);
+                block.appendChild(description);
+
+                // Append the block to the cell
+                cell.appendChild(block);
+            });
+        })
+        .catch(error => console.log('Error:', error));
+</script>  
 <div id = "main-mobile">
   <nav>
     <a class="active" href="./index.html"><img width="40" height="40px"src="rklg5.png" alt="img1"></img></a>
@@ -76,28 +146,7 @@
   <div>
     <div>
 
-    </div>
-    <p>"Somewhere, something incredible is waiting to be known"-Carl Sagan</p>
-  </div>
-  <button class="active" title="hb1" onclick="location.href='./about.html';" ><img width="80px" alt="moblog1" height="80px" src="abt1icon.png"></button>
 
-  <button title="res" class="active" onclick="location.href='./research.html';" >
-    <img width="80px" height="80px" alt="rs1" src="resicon.png">
-  </button>
-  <div>
-
-  </div>
-  <button title="proj" class="active" onclick="location.href='./featured.html';" >
-    <img width="80px" height="80px" alt="proj1" src="projicon.png">
-  </button>
-  <button title="ldn" class="active" onclick = "ldinview()"; >
-    <img width="80px" height="80px" alt="proj1" src="ldin.png">
-  </button>
-  <script>
-    function ldinview(){
-      window.open('https://www.linkedin.com/in/RonaldKroening','_blank');
-    }
-  </script>
 </body>
 
 

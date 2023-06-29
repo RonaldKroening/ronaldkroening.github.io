@@ -10,34 +10,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CV</title>
+    <title id="learn_pres">Home</title>
 
     <style>
-      p{
-        margin:20px;
-        min-width: 200px;
-      }
-      iframe{
-        width: 50%;
-        height: 420px;
-        display: inline;
-        border: none;
-      }
+
+
         a{
           font-size: 20px;
     
         }
-        p {font-size: 15px;color: white;font-family: verdana;max-width: 400px;text-align: center; margin-top: 20px;margin-bottom: 10px;}
-        @media screen and (min-width: 768px) {
-          #main-mobile {
-            display: none;
-          }
-        }
-      @media screen and (max-width: 768px) {
-        #main {
-          display: none;
-        }
-      }
 
       h4{
         margin-top:50px;
@@ -45,8 +26,12 @@
         font-size: 24px;
       }
 
-      
-      /* This CSS will only apply to screens with a max-width of 767px */
+      @media screen and (max-width: 768px) {
+        #main {
+          display: none;
+        }
+      }
+
       @media screen and (min-width: 768px) {
         #main-mobile {
           display: none;
@@ -63,17 +48,25 @@
           <li><a href="./main.html" class="nav-link">CV</a></li>
           <li><a href="./featured.html" class="nav-link">Projects</a></li>
           <li><a href="./research.html" class="nav-link">Research</a></li>
-          <li><a href="./learning.html" class = "nav-link">Learning Hall</a></li>
-          <a title ="gh" padding-left="100px" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ldin.png"></img></a>
-          <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ghub_logo.png"></img></a>
+          <li><a href=".learning.html" class = "nav-link">Learning Hall</a></li>
+          <a title ="gh" padding-left="100px" class="active" onclick="window.open('https://www.github.com/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ghub_logo.png"></img></a>
+          <a title ="ld" padding-left="100px" class="active" onclick="window.open('https://www.linkedin.com/in/RonaldKroening', '_blank')" ><img width="50px" alt="moblog" height="50px"src="ldin.png"></img></a>
         </ul>
       </nav>
-      <a class="active" href="rkresume.pdf"><img width="60%" src="rk-resume.png" alt="img1"></img></a>
-    </body>
+  </body>
+  <body>
+    <iframe id="pres_shower"src="" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</body>
 
-
-
-
+<script>
+    var main = "main"
+    if (window.innerWidth <= 768) {
+        main = "main-mobile";
+    }
+    var element = document.getElementById(main);
+    document.getElementById("pres_shower").setAttribute("src",localStorage.getItem("pres_to_show"));
+    document.getElementById("learn_pres").innerHTML = localStorage.getItem("pres_name_short")
+</script>
 
 </div>
 <div id = "main-mobile">
@@ -82,16 +75,15 @@
     <ul class="navigation">
       <li ><a >Ronald Kroening</a></li>
       <a title ="hb" class="active" href="./main.html" ><img width="40px" alt="moblog" height="40px"src="cvicon.png"></img></a>
-      
     </ul>
   </nav>
 
-    <a class="active" href="rkresume.pdf"><img width=90% height=90% src="rk-resume.png" alt="img1"></img></a>
+  <div>
 
-
-
-  
-
+  </div>
+  <body>
+    <iframe id="pres_shower"src="" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</body>
 </body>
 
 
