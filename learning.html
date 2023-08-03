@@ -19,11 +19,25 @@
           font-size: 20px;
     
         }
-
+       h3{
+        text-align: center;
+        margin: 0 auto;
+       }
       h4{
         margin-top:50px;
         margin-bottom: 50px;
+        text-align: center; 
+        margin: 0 auto;
         font-size: 24px;
+      }
+      h2{
+        font-size: 20px;
+        max-width: 70%;
+        text-align: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 40px;
       }
       table {
             border-collapse: collapse;
@@ -36,6 +50,13 @@
             text-align: center;
         }
 
+        .pres-obj {
+          width: 400px;
+          height: 160px;
+          background-color: burlywood;
+          color: burlywood;
+          margin-bottom: 50px;
+        }
         .block {
             width: 400px;
             height: 200px;
@@ -90,50 +111,45 @@
         </ul>
       </nav>
 
-  </body>
-  <table id="presentationTable"></table>
+      <h2 >This page is a dedicated space where I post bi-weekly presentations explaining Computer Science concepts.</h2>
+  <div id="presentationTable"></div>
 
 
 
 </div>
+</body>
 <script>
     // Fetch the presentation.json file
     fetch('presentations.json')
-        .then(response => response.json())
-        .then(data => {
-            // Generate the table rows and cells dynamically
-            const table = document.getElementById('presentationTable');
+  .then(response => response.json())
+  .then(data => {
+    const presentationList = document.getElementById('presentationTable');
 
-            data.forEach(item => {
-                const row = table.insertRow();
-                const cell = row.insertCell();
+    data.forEach(item => {
+      const t = item.name;
+      const d = item.description;
+      const l = item.link;
+      
+      let listItem = document.createElement("li"); // Changed div to li element
+      listItem.setAttribute("sty")
 
-                // Create the block element
-                const block = document.createElement('div');
-                block.classList.add('block');
+      let title = document.createElement("h3");
+      title.textContent = t;
+      let desc = document.createElement("p");
+      desc.textContent = d;
 
-                // Create the h2 element for title
-                const title = document.createElement('h2');
-                title.innerText = item.title;
+      listItem.appendChild(title);
+      listItem.appendChild(desc);
 
-                // Create the preview element
-                const preview = document.createElement('div');
-                preview.classList.add('preview');
+      listItem.onclick = function () {
+        window.location = l;
+      };
 
-                // Create the p element for description
-                const description = document.createElement('p');
-                description.innerText = item.description;
+      presentationList.appendChild(listItem);
+    });
+  })
+  .catch(error => console.log('Error:', error));
 
-                // Append the elements to the block
-                block.appendChild(title);
-                block.appendChild(preview);
-                block.appendChild(description);
-
-                // Append the block to the cell
-                cell.appendChild(block);
-            });
-        })
-        .catch(error => console.log('Error:', error));
 </script>  
 <div id = "main-mobile">
   <nav>
