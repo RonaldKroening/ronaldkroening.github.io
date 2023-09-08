@@ -38,6 +38,7 @@
         text-align: center;
         margin: 0 auto;
         margin-top: 40px;
+        margin-bottom: 40px;
       }
       table {
             border-collapse: collapse;
@@ -50,12 +51,27 @@
             text-align: center;
         }
 
+        #presentationTable {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap; /* To make sure the items wrap if needed */
+        }
         .pres-obj {
-          width: 400px;
+          width: 600px;
           height: 160px;
           background-color: burlywood;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap; 
+          border-radius: 24px;
           color: burlywood;
           margin-bottom: 50px;
+          justify-content: center;
+          align-self: center;
+          align-content: center;
+          align-items: center;
         }
         .block {
             width: 400px;
@@ -81,6 +97,10 @@
             height: 80px;
             background-color: #ddd;
             margin-bottom: 10px;
+            border-radius: 24px;
+        }
+        p{
+          max-width: 100%;
         }
 
       @media screen and (max-width: 768px) {
@@ -130,9 +150,8 @@
       const d = item.description;
       const l = item.link;
       
-      let listItem = document.createElement("li"); // Changed div to li element
-      listItem.setAttribute("sty")
-
+      let listItem = document.createElement("div"); // Changed div to li element
+      listItem.setAttribute("class","pres-obj")
       let title = document.createElement("h3");
       title.textContent = t;
       let desc = document.createElement("p");
@@ -142,7 +161,7 @@
       listItem.appendChild(desc);
 
       listItem.onclick = function () {
-        window.location = l;
+        window.open(l, '_blank'); 
       };
 
       presentationList.appendChild(listItem);

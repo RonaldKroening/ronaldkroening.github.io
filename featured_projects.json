@@ -1,7 +1,13 @@
 [
    {
+      "name":"Crypto",
+      "description":"Recently I had become interested in cryptograms and puzzles. In that spirit, I decided to design an IOS application that could decrypt them, as well as allow people to make their own cryptograms and generate secure passwords. Cryptograms can be entered by hand or use Apple's AI Vision Kit to extract text from images, though results depend on the image quality. My decryption approach utilized natural language processing, as it relied on analyzing words based on the order of letters, which was then used to map words instead of finding out each letter. For example: DRRFG can be mapped to APPLE, as both follow the pattern of 01123, where the first letter appears once, the second letter appears twice consecutively, and the third and fourth letters each appear only once, a pattern I have dubbed NUMREX- similar to REGEX pattern matching. This approach allows for a long cryptogram to be solved in seconds in contrast to a brute force approach. ",
+      "imgsrc":"synt.jpeg",
+      "link":"https://github.com/RonaldKroening/Crypto"
+   },
+   {
       "name":"Syntext",
-      "description":"As part of my Programming Languages course, I designed an Artificial Neural Network purely in Julia with the intention to classify text into different genres. As my goal was to learn the language syntax, I made an effort not to use any packages and design each part of the network myself.",
+      "description":"As part of my Programming Languages course, I designed an Artificial Neural Network purely in Julia with the intention to classify text into different genres. As my goal was to learn the language syntax, I made an effort not to use any packages and design each part of the network myself. This project not only allowed me to learn more about machine learning, but also showed the strength of Julia as a programming language, which is just as useful as Python with the benefit of faster runtimes.",
       "imgsrc":"synt.jpeg",
       "link":"https://github.com/RonaldKroening/Syntext"
    },
