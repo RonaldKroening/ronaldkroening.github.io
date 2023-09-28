@@ -13,7 +13,7 @@
     
   </head>
   <style>
-    p {font-size: 14px;color: white;font-family: verdana;max-width: 1050px;text-align: center; margin-top: 20px;margin-bottom: 10px;padding-left: 40px;}
+    p {max-width: 80%;font-size: 14px;color: white;font-family: verdana;max-width: 1050px;text-align: center; margin-top: 20px;margin-bottom: 10px;padding-left: 40px;}
     h1{
       font-size: 50px;
       padding-top: 10px;
@@ -21,6 +21,10 @@
     a{
       font-size: 20px;
 
+    }
+    table{
+      padding-left: 50px;
+      padding-right: 50px;
     }
     p {font-size: 15px;color: white;font-family: verdana;max-width: 800px;text-align: center; margin-top: 20px;margin-bottom: 10px;}
     h2{
@@ -31,6 +35,14 @@
       min-height: 100%;
       max-height: 200%;
   }
+  h5{
+    color: white;
+    font-family: verdana;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+  }
+  
   
     @media screen and (min-width: 768px) {
       #main-mobile {
@@ -54,7 +66,9 @@
       </nav>
     
     <h1><strong>Projects</strong></h1>
-    <p id="details"></p>
+    <table id="projectTable">
+      <tbody></tbody>
+  </table>
     </div>
 
     <div id = "main-mobile">
@@ -68,36 +82,82 @@
         </nav>
       
       <h1><strong>Projects</strong></h1>
-      <p id="details-mobile"></p>
+      <table id="projectTable-mobile">
+        <tbody></tbody>
+    </table>
       </div>
       
   </body>
   <script>
     fetch('/featured_projects.json')
       .then(response => response.json())
-      .then(data => {
+      .then(projects => {
+        console.log(projects)
         var main = "main"
         if (window.innerWidth <= 768) {
           main = "main-mobile";
         }
+        const tableBody = document.querySelector("#projectTable tbody");
+        const maxRowWidth = window.innerWidth / 100; // Maximum width for the table
+        var rowCount = 0;
+        let currentRowWidth = 0;
+        let currentRow = document.createElement("tr");
         var element = document.getElementById(main);
-        for(i = 0; i < data.length; i++){
-          console.log(data[i]);
-          const n = document.createElement('h2');
-          n.textContent = data[i].name
-          n.href = data[i].link
-          const d = document.createElement('p');
-          d.textContent = data[i].description
-          const d1 = document.createElement('a')
-          d1.href = data[i].link
-          d1.link = data[i].link
-          d1.target = "_black"
-          n.appendChild(d1)
-          element.appendChild(n);
-          element.appendChild(d);
-          
-          
-        }
+        projects.forEach((project) => {
+          // Create the elements as before
+          const row = document.createElement("tr");
+          const cell = document.createElement("td");
+          const h2 = document.createElement("h2");
+          const h5 = document.createElement("h5");
+          const h4 = document.createElement("h4");
+          const img = document.createElement("img");
+          const link = document.createElement("a");
+          const p = document.createElement("p");
+  
+          h2.textContent = project.name;
+          h2.style.textAlign = "center";
+  
+          h4.textContent = project.date;
+          h4.style.textAlign = "center";
+          h5.textContent = project.subline;
+          h5.style.textAlign = "center";
+  
+          img.src = "Project_Icons/"+project.imgsrc;
+          img.style.maxWidth = "120px"; // Limit image width to 120px
+          img.style.maxHeight = "120px"; // Limit image height to 120px
+  
+          link.href = project.link;
+          link.target = "_blank"; // Open link in a new tab
+          link.appendChild(img);
+  
+          p.textContent = project.description;
+  
+          // Append elements to the cell
+          cell.appendChild(h2);
+          cell.appendChild(h5);
+          cell.appendChild(h4);
+          cell.appendChild(link);
+          cell.appendChild(p);
+  
+          cell.style.paddingBottom = "100px"
+
+          if (rowCount > 2) {
+              // If adding this cell exceeds the maximum width, create a new row
+              tableBody.appendChild(currentRow);
+              currentRow = document.createElement("tr");
+              console.log(currentRow)
+              rowCount = 0;
+          }
+          console.log(cell)
+          // Append the cell to the current row
+          currentRow.appendChild(cell);
+          rowCount += 1;
+      });
+  
+      // Add the last row to the table
+      if (currentRow) {
+          tableBody.appendChild(currentRow);
+      }
       })
       .catch(error => console.error(error))
   </script> 

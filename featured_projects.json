@@ -1,32 +1,50 @@
 [
    {
+      "name":"S.T.A.S.I.S",
+      "subline":"Stability Trends and Analysis for Shaping Investment Strategies",
+      "date":"September 2023",
+      "description":"STASIS is a web application designed using Python, Javascript, and Django to allow for real-time and historical financial data to be provided from APIs and a MongoDB Database. It currently shows information for the Dow Jones Industrial Average and the S&P 500 that users can filter by Industry and Sector. In addition, STASIS also provides machine learning algorithms that can predict not only how volatile a security is but also how volatile it will be in the future.",
+      "imgsrc":"STASIS-Logo.png",
+      "link":"https://github.com/RonaldKroening/STASIS"
+   },
+   {
+      "name":"T.O.W.E.R",
+      "subline":"Thorough Offline Watchdog and Encrypted Reserve",
+      "date":"September 2023",
+      "description":"TOWER is a cross-platform application designed in C++ and Qt that specialized in data protection. It alllows for you to safely store passwords and files and uses RSA Encryption techniques to store them. It uses an SQLite database as well as other encryption algorithms to ensure protection, as well as Google's 2FA Authentication API. It is able to monitor internet traffic in order to detect potentially suspicious access.",
+      "imgsrc":"TOWER-Logo.png",
+      "link":"https://github.com/RonaldKroening/TOWER"
+   },
+   {
       "name":"Crypto",
-      "description":"Recently I had become interested in cryptograms and puzzles. In that spirit, I decided to design an IOS application that could decrypt them, as well as allow people to make their own cryptograms and generate secure passwords. Cryptograms can be entered by hand or use Apple's AI Vision Kit to extract text from images, though results depend on the image quality. My decryption approach utilized natural language processing, as it relied on analyzing words based on the order of letters, which was then used to map words instead of finding out each letter. For example: DRRFG can be mapped to APPLE, as both follow the pattern of 01123, where the first letter appears once, the second letter appears twice consecutively, and the third and fourth letters each appear only once, a pattern I have dubbed NUMREX- similar to REGEX pattern matching. This approach allows for a long cryptogram to be solved in seconds in contrast to a brute force approach. ",
-      "imgsrc":"synt.jpeg",
+      "subline":"Encryption and Decryption Application",
+      "date":"July 2023 - August 2023",
+      "description":"Recently I had become interested in cryptograms and puzzles. In that spirit, I decided to design an IOS application that could decrypt them, as well as allow people to make their own cryptograms and generate secure passwords. Cryptograms can be entered by hand or use Apple's AI Vision Kit to extract text from images, though results depend on the image quality. My decryption approach utilized natural language processing, as it focused on analyzing finidng the best words rather than individual letters. This approach allows for a long cryptogram to be solved in seconds in contrast to a brute force approach. ",
+      "imgsrc":"Crypto-Logo.png",
       "link":"https://github.com/RonaldKroening/Crypto"
    },
    {
       "name":"Syntext",
+      "subline":"Package-less Neural Network designed in Julia",
+      "date":"October 2021 - November 2021",
       "description":"As part of my Programming Languages course, I designed an Artificial Neural Network purely in Julia with the intention to classify text into different genres. As my goal was to learn the language syntax, I made an effort not to use any packages and design each part of the network myself. This project not only allowed me to learn more about machine learning, but also showed the strength of Julia as a programming language, which is just as useful as Python with the benefit of faster runtimes.",
-      "imgsrc":"synt.jpeg",
+      "imgsrc":"Syntext-Logo.png",
       "link":"https://github.com/RonaldKroening/Syntext"
    },
    {
-      "name":"Project 614",
-      "description":"This was my first research project I conducted, where I sought to build a model that can use reinforcement learning to classify pretrial court data by type of crime charged with. It used a Q-Table in order to improve a K-Means Clustering algorithm for classification. The goal was to not only achieve a significant learning speed by the model but also to see the effectiveness of reinforcement learning in an environment different than its traditional use. It was presented at the Seidenberg Machine Intelligence Day and won an award for Project Design at the CURES Undergraduate Research Day, both in December of 2022.",
-      "imgsrc":"legai.jpeg",
-      "link":"https://github.com/RonaldKroening/Project614"
-   },
-   {
       "name":"RecycleFinder",
+      "subline":"Sustainability Android Application",
+      "date":"March 2022 - May 2022",
       "description":"This was a group effort as part of my Software Engineering course, along with Michael Dadi, Victor Zapata III, and Federico . We designed an Android application that provided users with recycling related information. The Google Maps API and Google Firebase API were used to store information on recycling spots near the user, and the NewsAPI was used to provide articles relevant to sustainability.",
-      "imgsrc":"rf.png",
+      "imgsrc":"RecycleFinder-Logo.png",
       "link":"https://github.com/paceuniversity/cs389s2022team11"
    },
    {
       "name":"Outbreak",
+      "subline":"Reinforcement Learning Game and Programming Exercise",
+      "date":"May 2022 - July 2022",
       "description":"As part of my time as a Co-Instructor for the Serious Games and Artificial Intelligence course at the MIT Lincoln Laboratory, I designed a simple game that can be navigated by a reinforcement learning agent. The objective is to keep your citizens alive during a zombie outbreak, with the ability to move them around a board to protect them. Students were then given the project to make their own.",
-      "imgsrc":"ob.png",
+      "imgsrc":"Outbreak-Logo.png",
       "link":"https://github.com/RonaldKroening/SGAI-Outbreak!"
    }
 ]
