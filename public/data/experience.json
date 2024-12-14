@@ -2,7 +2,7 @@
     {
         "institution": "Harvard University Widener Library Judaica Division",
         "position": "Summer Student Programmer",
-        "jobType": "Internship",
+        "jobType": "Seasonal Full-Time",
         "img" : "harvlib.jpeg",
         "location": "Cambridge, MA",
         "dateRange": "May 2024 - Present",
@@ -15,7 +15,7 @@
         "location": "Remote",
         "img" : "pron.jpeg",
         "dateRange": "Sep. 2023 - April 2024",
-        "description": "As a Contract Machine Learning Engineer at Pronova Pets, I designed and implemented a full-stack mobile application that analyzed pet data to provide real-time health information. My role involved analyzing biological readings from animals and applying machine learning methods to scalable datasets from cloud databases to make accurate health predictions. This project required a deep understanding of both machine learning and full-stack development to deliver a robust and user-friendly application."
+        "description": "As a Contract Machine Learning Engineer at Pronova Pets, I designed and implemented a full-stack mobile application that provided users with needed information. My role involved applying machine learning methods to datasets from cloud databases to make accurate predictions. This project required a deep understanding of both machine learning and full-stack development to deliver a robust and user-friendly application."
     },
     {
         "institution": "BlackRocket Productions",
@@ -33,7 +33,7 @@
         "location": "Remote",
         "img" : "codespeak.png",
         "dateRange": "1/16/2023 - 05/21/2023",
-        "description": "In my role as a Coding Coach at Codespeaks Labs, I have had the opportunity to work closely with students on a variety of coding projects, fostering their understanding and enthusiasm for programming. I developed and delivered comprehensive programming curricula, incorporating tools and languages such as Scratch, Arduino, and HTML. My responsibilities included mentoring students, providing hands-on assistance with their projects, and creating an engaging learning environment that encouraged creativity and problem-solving."
+        "description": "I taught elementary-level students programming skills through different educational services such as Scratch.mit, and robotic kits such as Dash robotics and Makey-Makey kits. I was responsible for two different courses at two different schools, fostering a positive and engaging learning environment with pre-designed course material."
     },
     {
         "institution": "Seidenberg Creative Labs",
@@ -47,10 +47,10 @@
     {
         "institution": "MIT Lincoln Laboratory",
         "position": "Summer Co-Lead Instructor",
-        "jobType": "Full-Time",
+        "jobType": "Seasonal Full-Time",
         "location": "Cambridge, MA",
         "img" : "bwsi.png",
         "dateRange": "05/05/2022 - 08/08/2022",
-        "description": "As a Co-Lead Instructor at MIT Lincoln Laboratory, I was instrumental in the production of coursework and assessments, as well as in the overall course layout. I engaged with students, providing guidance and motivation as they developed their projects. My role involved applying the Agile framework to manage and facilitate the learning process, ensuring that students were able to create productive and innovative projects. I also contributed to the development of the curriculum, focusing on key areas of programming and artificial intelligence using Python and OpenAIGym."
+        "description": "I worked as a Co-Lead Instructor for one of the courses- Serious Games and Artificial Intelligence- which taught high school students artificial intelligence and programming through Reinforcement LearningMy role involved managing and facilitating the learning process, ensuring that students were able to create productive and innovative projects. I also contributed to the development of the curriculum, focusing on key areas of programming and artificial intelligence using Python and OpenAIGym."
     }
 ]
