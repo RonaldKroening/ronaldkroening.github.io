@@ -17,10 +17,10 @@ const ResumeItem = ({
     <div className="resume-wrapper">
       <div className="resume-item">
         <div className="resume-header">
-          <div className="resume-logo">
-          <img width={60} height={60} src={`logos/${img}`} alt="Image" />
+        <div className="resume-logo">
+        <img className="resume-img" src={`logos/${img}`} alt="Image" />
+      </div>
 
-          </div>
           <div className="resume-info">
             <h3 className="resume-institution">{institution}</h3>
             <div className="resume-position-details">

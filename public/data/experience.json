@@ -19,7 +19,7 @@
     },
     {
         "institution": "BlackRocket Productions",
-        "position": "Lead Instructor",
+        "position": "Summer Lead Instructor",
         "jobType": "Full-Time",
         "location": "Remote",
         "img" : "blar.jpeg",
@@ -38,7 +38,7 @@
     {
         "institution": "Seidenberg Creative Labs",
         "position": "Software Engineer",
-        "jobType": "Full-Time",
+        "jobType": "Part Time",
         "location": "New York, NY",
         "img" : "scl.png",
         "dateRange": "11/01/2021 - 5/20/2023",
@@ -46,7 +46,7 @@
     },
     {
         "institution": "MIT Lincoln Laboratory",
-        "position": "Co-Lead Instructor",
+        "position": "Summer Co-Lead Instructor",
         "jobType": "Full-Time",
         "location": "Cambridge, MA",
         "img" : "bwsi.png",
