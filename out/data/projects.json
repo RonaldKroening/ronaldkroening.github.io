@@ -1,0 +1,44 @@
+[
+    {
+       "projectName":"M.A.N.S.A Trading Bot",
+       "subline":"Making Assumptions for Next Sequence of Assets",
+       "date":"",
+       "description":"MANSA is a trading bot that focuses on recognizing common stock-trading patterns in order to predict the next movement and make trading decisions.",
+       "imgsrc":"MANSA-Logo.png",
+       "tags" : "C++",
+       "link":"https://github.com/RonaldKroening/Mansatb"
+    },
+    {
+       "projectName":"S.T.E.V.E",
+       "subline":"System Trained to EValuate Elections",
+       "description":"STEVE allows for elections to be predicted by taking in information about candidate performance alongside economic and political data about the given areas. It stores the data in a SQLLite Database and uses ML algorithms to predict the outcome.",
+       "imgsrc":"STEVE-Logo.png",
+       "tags" : "Python&Flask&SQLLite&",
+       "link":"https://github.com/RonaldKroening/STEVE"
+    },
+     {
+        "projectName":"S.T.A.S.I.S",
+        "subline":"Stability Trends and Analysis for Shaping Investment Strategies",
+        "description":"STASIS is a web application designed using Python, Javascript, and Django to allow for real-time and historical financial data to be provided from APIs and a MongoDB Database. It currently shows information for the Dow Jones Industrial Average and the S&P 500 that users can filter by Industry and Sector. In addition, STASIS also provides machine learning algorithms that can predict not only how volatile a security is but also how volatile it will be in the future.",
+        "imgsrc":"STASIS-Logo.png",
+        "tags" : "Django&Python&Javascript&MongoDB",
+        "link":"https://github.com/RonaldKroening/STASIS"
+     },
+     {
+        "projectName":"T.O.W.E.R",
+        "subline":"Thorough Offline Watchdog and Encrypted Reserve",
+        "description":"TOWER is a cross-platform application designed in C++ and Qt that specialized in data protection. It alllows for you to safely store passwords and files and uses RSA Encryption techniques to store them. It uses an SQLite database as well as other encryption algorithms to ensure protection, as well as Google's 2FA Authentication API. It is able to monitor internet traffic in order to detect potentially suspicious access.",
+        "imgsrc":"TOWER-Logo.png",
+        "tags" : "C++&y&Qt&&AES Encryption",
+        "link":"https://github.com/RonaldKroening/TOWERMk1"
+     },
+     {
+        "projectName":"Crypto",
+        "subline":"Encryption and Decryption Application",
+        "description":"Crypto is an IOS application that could solve cryptograms, as well as allow people to make their own cryptograms and generate secure passwords. Cryptograms can be entered by hand or use Apple's AI Vision Kit to extract text from images, though results depend on the image quality. My decryption approach utilized natural language processing, as it focused on analyzing finidng the best words rather than individual letters. This approach allows for a long cryptogram to be solved in seconds in contrast to a brute force approach. ",
+        "imgsrc":"Crypto-Logo.png",
+        "tags" : "&Swift&Apple Vision Kit",
+        "link":"https://github.com/RonaldKroening/Crypto"
+     }
+  ]
+  
