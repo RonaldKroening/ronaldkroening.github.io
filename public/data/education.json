@@ -1,0 +1,19 @@
+[
+    {
+      "institution": "Pace University",
+      "position": "Bachelor's Degree",
+      "jobType": "BS in Computer Science",
+      "dateRange": "September 2019 - May 2023",
+      "img": "/pace.png",
+      "description": ""
+    },
+    {
+      "institution": "Tufts University",
+      "position": "Graduate Certificate",
+      "jobType": "Graduate Certificate in Computer Science",
+      "dateRange": "September 2023 - May 2024",
+      "img": "/tufts.png",
+      "description": ""
+    }
+  ]
+  

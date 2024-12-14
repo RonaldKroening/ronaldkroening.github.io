@@ -1,0 +1,87 @@
+.projectItem {  
+   font-family: Arial, sans-serif;  
+   background-color: #ffffff73; /* Dark navy blue */  
+   color: #fff;  
+   margin: 20px; /* Add some margin around the item */
+   border-radius: 8px; /* Optional rounded corners */
+   overflow: hidden; /* Prevents content from spilling out */
+   border: 4px solid white;
+}
+
+.header {  
+   display: flex;  
+   justify-content: space-between;  
+   align-items: center;  
+   padding: 20px;  
+   background-color: #ffffff73; /* Dark navy blue */   /* Slightly darker background for header */
+}
+
+.logoPlaceholder {  
+   width: 100px;  
+   height: 100px;  
+   background-color: #ffffff; /* Gray placeholder for the logo */
+   margin-right: 20px;  
+   overflow: hidden;
+}
+
+.logo {  
+   width: 100px;  
+   height: 100px;  
+   object-fit: cover; /* Ensures the image covers the placeholder */
+}
+
+.projectInfo {  
+   flex-grow: 1;  
+}
+
+.projectInfo h1 {  
+   font-size: 24px;  
+   margin-bottom: 10px;  
+   color: #fff; /* Ensure the title is visible */
+}
+
+.projectInfo p {  
+   font-size: 18px;  
+   margin-bottom: 10px;  
+   color: #ffffff; /* Slightly lighter text for details */
+   max-width: 70%;
+}
+
+.topRightButtons {  
+   display: flex;  
+   justify-content: space-between;  
+   align-items: center;  
+}
+
+.btn {  
+   background-color: #fff; /* Gray button */  
+   color: #333;  
+   border: none;  
+   padding: 10px 20px;  
+   font-size: 16px;  
+   font-weight: bold;
+   cursor: pointer;  
+   width: 100px;
+   height: 40px;
+   margin-left: 10px;  
+   border-radius: 5px; /* Optional rounded corners for buttons */
+   transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn:hover {  
+   background-color: #ffffff; /* Darker gray on hover */
+   color: #fff; /* Change text color on hover */
+}
+
+.main {  
+   padding: 20px;  
+   background-color: #ffffff73;
+   border-bottom-left-radius: 8px; /* Rounded corners at the bottom */
+   border-bottom-right-radius: 8px; /* Rounded corners at the bottom */
+}
+
+.main p {  
+   font-size: 16px;  
+   line-height: 1.6;  
+   color: #ddd; /* Light gray text for description */
+}

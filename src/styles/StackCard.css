@@ -1,0 +1,75 @@
+/* Card container */
+.card {
+  background-color: #b3b3b3;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100px;
+  height: 140px;
+  text-align: center;
+  color: #fff;
+  margin: 10px;
+  margin-bottom: 5px;
+
+  /* Flexbox to center content */
+  display: flex;
+  flex-direction: column; /* Ensure content stacks vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+  img{
+    margin: 0px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Image styling */
+  .card-image {
+    /* width: 80%;
+    margin-top: 20px;
+    height: 50%; */
+    /* object-fit: cover;
+    */
+    height: 30%;
+    width: 40%;
+    justify-content: center;
+  }
+  
+  /* Content container */
+  .card-content {
+    padding: 16px;
+  }
+  
+  /* Title styling */
+  .card-title {
+    font-size: .75rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  /* Description styling */
+  .card-description {
+    font-size: 0.9rem;
+    color: #d1d1d1;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  /* Link styling */
+  .card-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #4fc3f7;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .card-link:hover {
+    color: #82e9ff;
+  }
+  

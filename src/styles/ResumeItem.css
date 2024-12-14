@@ -1,0 +1,71 @@
+/* Outer wrapper to center the content */
+.resume-wrapper {
+
+    display: flex;
+    min-height: 10vh;
+    padding: 20px;
+  }
+  
+  /* Resume item card */
+  .resume-item {
+    width: 800px;
+    padding: 20px;
+    background-color: #ffffff73;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+  
+  /* Header section */
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .resume-logo {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  .resume-info {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+  
+  .resume-institution {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .resume-position-details {
+    font-size: 1rem;
+    color: #d1d1d1;
+    margin-top: 5px;
+  }
+  
+  .resume-divider {
+    margin: 0 5px;
+  }
+  
+  .resume-meta {
+    text-align: right;
+  }
+  
+  .resume-location,
+  .resume-dates {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+  }
+  
+  /* Description section */
+  .resume-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #d1d1d1;
+  }
+  
