@@ -1,0 +1,56 @@
+[
+    {
+        "institution": "Harvard University Widener Library Judaica Division",
+        "position": "Summer Student Programmer",
+        "jobType": "Internship",
+        "img" : "harvlib.jpeg",
+        "location": "Cambridge, MA",
+        "dateRange": "May 2024 - Present",
+        "description": "In my role as a Summer Student Programmer at Harvard University Widener Library Judaica Division, I have worked with Google Chrome extensions developed with web technologies to optimize the performance of library operations. I designed programs in Python and JavaScript to process inventories and generate reports. Additionally, I assisted library staff with various technical issues, ensuring smooth and efficient operations within the library."
+    },
+    {
+        "institution": "Pronova Pets",
+        "position": "Contract Machine Learning Engineer",
+        "jobType": "Contract",
+        "location": "Remote",
+        "img" : "pron.jpeg",
+        "dateRange": "Sep. 2023 - April 2024",
+        "description": "As a Contract Machine Learning Engineer at Pronova Pets, I designed and implemented a full-stack mobile application that analyzed pet data to provide real-time health information. My role involved analyzing biological readings from animals and applying machine learning methods to scalable datasets from cloud databases to make accurate health predictions. This project required a deep understanding of both machine learning and full-stack development to deliver a robust and user-friendly application."
+    },
+    {
+        "institution": "BlackRocket Productions",
+        "position": "Lead Instructor",
+        "jobType": "Full-Time",
+        "location": "Remote",
+        "img" : "blar.jpeg",
+        "dateRange": "07/2023 - 08/2023",
+        "description": "As a Lead Instructor at BlackRocket Productions, I taught Computer Science courses to primary-level students, covering topics such as Python Programming, Web Development, and Game Development. I organized lecture materials for daily lessons, ensuring that each class was well-structured and engaging. Additionally, I managed necessary functions such as daily backups to ensure the security and continuity of our educational content."
+    },
+    {
+        "institution": "Codespeaks Labs",
+        "position": "Coding Coach",
+        "jobType": "Part-Time",
+        "location": "Remote",
+        "img" : "codespeak.png",
+        "dateRange": "1/16/2023 - 05/21/2023",
+        "description": "In my role as a Coding Coach at Codespeaks Labs, I have had the opportunity to work closely with students on a variety of coding projects, fostering their understanding and enthusiasm for programming. I developed and delivered comprehensive programming curricula, incorporating tools and languages such as Scratch, Arduino, and HTML. My responsibilities included mentoring students, providing hands-on assistance with their projects, and creating an engaging learning environment that encouraged creativity and problem-solving."
+    },
+    {
+        "institution": "Seidenberg Creative Labs",
+        "position": "Software Engineer",
+        "jobType": "Full-Time",
+        "location": "New York, NY",
+        "img" : "scl.png",
+        "dateRange": "11/01/2021 - 5/20/2023",
+        "description": "As a Software Engineer at Seidenberg Creative Labs, I engaged directly with clients to transform their ideas into digital solutions. I collaborated with a team of developers to design and develop prototypes for various projects. My role involved utilizing a wide range of technologies including React, JavaScript, HTML, Python, AWS, and Google APIs. I played a key part in both the frontend and backend development processes, ensuring that the solutions were not only functional but also scalable and user-friendly."
+    },
+    {
+        "institution": "MIT Lincoln Laboratory",
+        "position": "Co-Lead Instructor",
+        "jobType": "Full-Time",
+        "location": "Cambridge, MA",
+        "img" : "bwsi.png",
+        "dateRange": "05/05/2022 - 08/08/2022",
+        "description": "As a Co-Lead Instructor at MIT Lincoln Laboratory, I was instrumental in the production of coursework and assessments, as well as in the overall course layout. I engaged with students, providing guidance and motivation as they developed their projects. My role involved applying the Agile framework to manage and facilitate the learning process, ensuring that students were able to create productive and innovative projects. I also contributed to the development of the curriculum, focusing on key areas of programming and artificial intelligence using Python and OpenAIGym."
+    }
+]

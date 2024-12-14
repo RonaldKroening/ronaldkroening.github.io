@@ -1,0 +1,36 @@
+{
+    "frontend":{
+        "displayName" : "Front End",
+        "data" : [
+            "React","Next.js","Node.js","Javascript","Django"
+        ]
+    },
+    "backend":{
+        "displayName" : "Back End",
+        "data" : [
+            "Flask","Python","MySQL","SQLLite"
+        ]
+    },
+    "CloudBase":{
+        "displayName" : "Cloud Services",
+        "data" : [
+            "MongoDB","AWS","Google Cloud Platform","Netlify"
+        ]
+    },
+    "AI":{
+        "displayName" : "AI",
+        "data" : [
+            "Tensorflow","Sci-kit Learn","Weka"
+        ]
+    },
+    "Ds":{
+        "displayName" : "Data Science",
+        "data" : [
+            "Pandas","Numpy","Matplotlib","Mathmatica","Julia"
+        ]
+    },
+    "Langs":{
+        "displayName" : "Other Languages",
+        "data" : ["Java","C++","C#", "Swift"]
+    }
+}
