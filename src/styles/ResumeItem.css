@@ -1,6 +1,5 @@
 /* Outer wrapper to center the content */
 .resume-wrapper {
-
     display: flex;
     min-height: 10vh;
     padding: 20px;
@@ -43,7 +42,7 @@
   
   .resume-position-details {
     font-size: 1rem;
-    color: #d1d1d1;
+    color: #ffffff;
     margin-top: 5px;
   }
   
@@ -57,15 +56,15 @@
   
   .resume-location,
   .resume-dates {
-    font-size: 0.9rem;
-    color: #b0b0b0;
+    font-size: 0.rem;
+    color: #ffffff;
   }
   
   /* Description section */
   .resume-description {
     font-size: 0.9rem;
     line-height: 1.5;
-    color: #d1d1d1;
+    color: #ffffff;
   }
   .resume-logo {
     display: flex;
@@ -81,3 +80,23 @@
     height: 75%; /* Make the image as tall as the container */
     object-fit: contain; /* Ensures the image fits within the container without being cropped */
   }
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-bottom: 15px;
+}
+
+.resume-meta {
+  flex-shrink: 0; 
+  text-align: right;
+  white-space: nowrap;
+}
+
+.resume-location,
+.resume-dates {
+  font-size: 0.9rem; 
+  color: #ffffff;
+  margin: 0; 
+}

@@ -20,7 +20,6 @@ const ResumeItem = ({
         <div className="resume-logo">
         <img className="resume-img" src={`logos/${img}`} alt="Image" />
       </div>
-
           <div className="resume-info">
             <h3 className="resume-institution">{institution}</h3>
             <div className="resume-position-details">
