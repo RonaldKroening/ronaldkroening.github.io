@@ -45,11 +45,11 @@
         "description": "As a Software Engineer at Seidenberg Creative Labs, I engaged directly with clients to transform their ideas into digital solutions. I collaborated with a team of developers to design and develop prototypes for various projects. My role involved utilizing a wide range of technologies including React, JavaScript, HTML, Python, AWS, and Google APIs. I played a key part in both the frontend and backend development processes, ensuring that the solutions were not only functional but also scalable and user-friendly."
     },
     {
-        "institution": "MIT Lincoln Laboratory",
+        "institution": "MIT Lincoln Laboratory BeaverWorks Summer Institute",
         "position": "Summer Co-Lead Instructor",
         "jobType": "Seasonal Full-Time",
         "location": "Cambridge, MA",
-        "img" : "bwsi.png",
+        "img" : "mitbwsi.jpeg",
         "dateRange": "05/05/2022 - 08/08/2022",
         "description": "I worked as a Co-Lead Instructor for one of the courses- Serious Games and Artificial Intelligence- which taught high school students artificial intelligence and programming through Reinforcement LearningMy role involved managing and facilitating the learning process, ensuring that students were able to create productive and innovative projects. I also contributed to the development of the curriculum, focusing on key areas of programming and artificial intelligence using Python and OpenAIGym."
     }
