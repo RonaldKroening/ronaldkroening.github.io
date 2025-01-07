@@ -27,7 +27,8 @@ const StatusCard = () => {
                 alt={resume.altText} // Use the alt text from the object
                 style={{ cursor: 'pointer' }} // Optional: Change cursor to pointer
             />
-            <h3><strong>Current Status</strong></h3>
+            <h3 id="stat"><strong>Current Status</strong></h3>
+
             <h3>Open for Work</h3>
         </div>
     );

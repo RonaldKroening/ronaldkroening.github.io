@@ -23,3 +23,14 @@ img{
     align-content: center;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .LCMain{
+        display: none;
+    }
+
+    h3{
+        font-size:12px;
+    }
+    
+}

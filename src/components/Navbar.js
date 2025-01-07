@@ -13,6 +13,11 @@ const Navbar = () => {
 
         <ul className="navbar-links">
         <li>
+          <Link href="/data/Ronald_Kroening_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            Resume
+          </Link>
+        </li>
+        <li>
           <Link href="https://www.github.com/RonaldKroening" target="_blank" rel="noopener noreferrer">
             Github
           </Link>

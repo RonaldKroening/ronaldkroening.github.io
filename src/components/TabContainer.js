@@ -10,27 +10,31 @@ export default function TabContainer({ tabContents }) {
 
   return (
     <div className="tab-container">
-        <h1>Experience</h1>
-      <div className="tabs">
-        {tabContents.map((tab) => (
-          <button
-            key={tab.id}
-            className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
-            onClick={() => showTabContent(tab.id)}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-      {tabContents.map((tab) => (
-        <div
-          key={tab.id}
-          className="tab-content"
-          style={{ display: activeTab === tab.id ? "block" : "none" }}
-        >
-          {tab.component}
+        <h1 className="ex-lab">Experience</h1>
+      <div className="tab-hdr">
+        <div className="tabs">
+          {tabContents.map((tab) => (
+            <button
+              key={tab.id}
+              className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
+              onClick={() => showTabContent(tab.id)}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
-      ))}
+        <div className="tab-content-hldr">
+          {tabContents.map((tab) => (
+            <div
+              key={tab.id}
+              className="tab-content"
+              style={{ display: activeTab === tab.id ? "block" : "none" }}
+            >
+              {tab.component}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

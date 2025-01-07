@@ -7,19 +7,9 @@ import Stack from "../components/Stack.js"
 
 const Main = () => {
     return (
-        <div>
-            <div className='all'>
-                
-                <LocationCard></LocationCard>
-                <div className="main-container">
-                    <h1>Ronald Kroening</h1>
+        <div className="main-container">
+                    <h1 className='title'>Ronald Kroening</h1>
                     <p>I’m a Software Engineer based in New York City looking for my next opportunity.</p>
-                </div>
-                <StatusCard></StatusCard>
-                
-
-            </div>
-            
         </div>
     );
 };

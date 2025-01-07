@@ -41,7 +41,7 @@ const Stack = ({ fileName }) => {
 //https://icon.icepanel.io/Technology/svg/
   return (
     <div className='st-container'>
-      <h1>Technical Stack</h1>
+      <h1 className="tsl" id="tstack-lab">Technical Stack</h1>
       <div className="stack">
         
         {stackData.map((item, index) => (

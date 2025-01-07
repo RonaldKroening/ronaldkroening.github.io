@@ -16,7 +16,15 @@
 h3{
     font-weight: normal;
 }
-
+ul{
+    color: white;
+    
+}
+#stat {
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 3px;
+  }
 img{
     align-self: center;
     align-items: center;
@@ -24,4 +32,9 @@ img{
     text-align: center;
     margin-bottom: 10px;
     margin-top:10px;
+}
+@media (max-width: 768px) {
+    .SMain{
+        display: none;
+    }
 }

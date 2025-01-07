@@ -1,102 +1,162 @@
 /* Outer wrapper to center the content */
 .resume-wrapper {
-    display: flex;
-    min-height: 10vh;
-    padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically on small screens */
+  align-items: center;
+  min-height: 10vh;
+  padding: 10px;
+}
+
+/* Resume item card */
+.resume-item {
+  width: 600px;
+  padding: 15px;
+  background-color: #ffffff73;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section */
+.resume-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Circular logo */
+  overflow: hidden;
+}
+
+.resume-img {
+  height: 75%;
+  object-fit: contain;
+}
+
+.resume-info {
+  flex-grow: 1;
+}
+
+.resume-institution {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.resume-position-details {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.resume-meta {
+  flex-shrink: 0;
+  text-align: right;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.resume-location,
+.resume-dates {
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+/* Description section */
+.resume-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .resume-wrapper {
+    width: 240px;
+    padding: 10px;
   }
-  
+
   /* Resume item card */
   .resume-item {
-    width: 800px;
-    padding: 20px;
     background-color: #ffffff73;
     border-radius: 10px;
     color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
   }
-  
+
   /* Header section */
   .resume-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .resume-logo {
-    width: 50px;
-    height: 50px;
-    background-color: #ffffff;
-    border-radius: 5px;
-  }
-  
-  .resume-info {
-    flex-grow: 1;
-    margin-left: 10px;
-  }
-  
-  .resume-institution {
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .resume-position-details {
-    font-size: 1rem;
-    color: #ffffff;
-    margin-top: 5px;
-  }
-  
-  .resume-divider {
-    margin: 0 5px;
-  }
-  
-  .resume-meta {
-    text-align: right;
-  }
-  
-  .resume-location,
-  .resume-dates {
-    font-size: 0.rem;
-    color: #ffffff;
-  }
-  
-  /* Description section */
-  .resume-description {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #ffffff;
-  }
+
   .resume-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60px;
-    height: 60px; /* Defines a fixed square container */
-    overflow: hidden; /* Ensures the image doesn't overflow */
-    border-radius: 50%; /* Optional: circular container */
+    height: 60px;
+    border-radius: 50%; 
+    overflow: hidden;
   }
-  
+  .res-sep-hdr{
+    display: flex;
+    align-items: center;
+  }
+
   .resume-img {
-    height: 75%; /* Make the image as tall as the container */
-    object-fit: contain; /* Ensures the image fits within the container without being cropped */
+    object-fit: contain;
   }
 
-.resume-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-  margin-bottom: 15px;
-}
+  .resume-info {
+    flex-grow: 1;
+  }
 
-.resume-meta {
-  flex-shrink: 0; 
-  text-align: right;
-  white-space: nowrap;
-}
+  .resume-institution {
+    font-size: .75rem;
+    font-weight: bold;
+    max-width: 60%;
+    color: #fff;
+  }
 
-.resume-location,
-.resume-dates {
-  font-size: 0.9rem; 
-  color: #ffffff;
-  margin: 0; 
+  .resume-position-details {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+
+  .resume-meta {
+    flex-shrink: 0;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
+
+  .resume-location,
+  .resume-dates {
+    font-size: 0.8rem;
+    color: #ffffff;
+
+  }
+
+  .resume-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-top: 5px;
+    width: 100%;
+  }
+
 }

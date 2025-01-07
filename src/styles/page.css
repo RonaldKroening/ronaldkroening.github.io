@@ -1,10 +1,54 @@
-.content{
-    display: flex;
+.content {
+    margin-left: 10%;
+    margin-right: 10%;
 }
-.connectContainer{
+
+h1 {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 42px;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Horizontally center items */
+    text-align: center; /* Center text inside items */
+    width: 100%; /* Full width of the page */
+}
+
+.allcont {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontally center items */
+    justify-content: center; /* Vertically center items */
+    text-align: center; /* Center text */
+}
+
+.connectContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .connectContainer {
+        margin-top: 50px;
+        padding: 20px;
+    }
+    .content {
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+        text-align: center;
+        flex-direction: column;
+      }
+    h1 {
+        font-size: 30px; 
+    }
 }

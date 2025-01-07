@@ -18,7 +18,7 @@ export default function Home() {
   //       <ConnectWidget></ConnectWidget>
   //     </div>
   return (
-    <div>
+    <div className="allcont">
       <Navbar></Navbar>
       <Main></Main>
       <div className="content">

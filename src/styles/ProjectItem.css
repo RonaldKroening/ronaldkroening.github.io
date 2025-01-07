@@ -85,3 +85,13 @@
    line-height: 1.6;  
    color: #ddd; /* Light gray text for description */
 }
+@media (max-width: 768px) {
+   .projectItem {
+       margin: 10px 5px;
+   }
+
+   .projectInfo p {
+       font-size: 16px;
+       max-width: 100%;
+   }
+}

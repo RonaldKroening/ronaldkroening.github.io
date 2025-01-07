@@ -70,3 +70,12 @@
     color: #82e9ff;
   }
   
+  @media (max-width: 768px) {
+    .card{
+      max-width: 60px;
+      height: 80px;
+    }
+
+    
+ }
+ 
