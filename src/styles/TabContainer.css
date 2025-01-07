@@ -12,6 +12,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 400px;
 }
 
 h1 {
@@ -22,9 +23,9 @@ h1 {
 .tab-container {
   justify-content: space-between;
   display: flex;
-  margin-bottom: 100px;
-  flex-wrap: wrap; /* Make tabs wrap on mobile */
-  gap: 10px; /* Add spacing between the tabs */
+  gap: 10px; 
+  max-width: 100%;
+  text-align: center;
 }
 
 .tabs {
@@ -68,6 +69,8 @@ h1 {
   color: white;
   text-align: left;
   font-size: 18px;
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
 .ex-lab {
@@ -77,7 +80,6 @@ h1 {
   font-weight: bold;
   font-size: 42px;
   max-width: 20%;
-  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -155,7 +157,7 @@ h1 {
     color: white;
     text-align: left;
     font-size: 18px;
-    max-height: 360px;
+    max-height: 300px;
     overflow-y: scroll;
   }
 
