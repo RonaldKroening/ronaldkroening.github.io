@@ -17,7 +17,6 @@ const Stack = ({ fileName }) => {
         }
         const data = await response.json();
         
-        // Flatten the structure into a single array for rendering
         const flattenedData = Object.entries(data).flatMap(([key, section]) =>
           section.data.map((name) => ({
             category: section.displayName,
@@ -47,9 +46,9 @@ const Stack = ({ fileName }) => {
         {stackData.map((item, index) => (
           <div key={index} className="stack-item">
             <StackCard
-              image="/fmwk.jpg" // Static image path
+              image="/fmwk.jpg" 
               title={item.name}
-              category={item.category} // Optional to display the category
+              category={item.category} 
             />
           </div>
         ))}

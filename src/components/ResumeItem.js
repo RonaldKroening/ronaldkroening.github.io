@@ -64,7 +64,7 @@ const ResumeItem = ({
             <h3 className="resume-institution">{institution}</h3>
             <div className="resume-position-details">
               <span className="resume-position">{position}</span>
-              <span className="resume-divider">|</span>
+              <span className="resume-divider"></span>
               <span className="resume-job-type">{jobType}</span>
             </div>
           </div>

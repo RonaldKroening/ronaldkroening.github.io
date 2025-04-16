@@ -48,15 +48,16 @@ export default function ListContent({ file }) {
           );
         }
 
+
         return (
           <ResumeItem
             key={index}
             institution={item.institution}
-            position={item.position}
-            jobType={item.jobType}
+            position={item.position || item.title}
+            {...(item.jobType && { jobType: " | "+item.jobType })}
             img={item.img}
-            location={item.location}
-            dateRange={item.dateRange}
+            location={item.location || ""}
+            dateRange={item.dateRange || item.asOf}
             description={item.description || ""}
           />
         );

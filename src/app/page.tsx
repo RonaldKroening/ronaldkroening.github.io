@@ -12,6 +12,7 @@ export default function Home() {
   const experiences = [
     { id: "work", label: "Work Experience", component: <ListContent file="/data/experience.json" /> },
     { id: "school", label: "Education", component: <ListContent file="data/education.json" /> },
+    { id: "certs", label: "Certifications", component: <ListContent file="data/certifications.json" /> },
   ];
   // { id: "projects", label: "Projects", component: <ListContent file="data/projects.json" /> }
   // <div className="connectContainer">

@@ -1,8 +1,8 @@
 {
     "frontend":{
-        "displayName" : "Front End",
+        "displayName" : "Web Frameworks",
         "data" : [
-            "React","Next.js","Node.js","Javascript","Django"
+            "React","Next.js","Node.js","Javascript","Django","Vue3"
         ]
     },
     "backend":{
