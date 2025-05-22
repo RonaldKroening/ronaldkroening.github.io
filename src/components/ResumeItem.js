@@ -11,6 +11,7 @@ const ResumeItem = ({
   location,
   dateRange,
   description,
+  link,
 }) => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -28,7 +29,7 @@ const ResumeItem = ({
   if (isMobile) {
     return (
       <div className="resume-wrapper">
-        <div className="resume-item">
+        <div className="resume-item" onClick={() => window.open(link, '_blank')}>
           <div className="resume-header">
             <div className="res-sep-hdr">
               <div className="resume-logo">
@@ -55,7 +56,7 @@ const ResumeItem = ({
 
   return (
     <div className="resume-wrapper">
-      <div className="resume-item">
+      <div className="resume-item" onClick={() => window.open(link, '_blank')}>
         <div className="resume-header">
           <div className="resume-logo">
             <img className="resume-img" src={`logos/${img}`} alt="Image" />

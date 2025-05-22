@@ -59,6 +59,7 @@ export default function ListContent({ file }) {
             location={item.location || ""}
             dateRange={item.dateRange || item.asOf}
             description={item.description || ""}
+            link={item.link || ""}
           />
         );
       })}
